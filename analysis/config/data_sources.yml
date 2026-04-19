@@ -1,0 +1,32 @@
+# Berkeley open data portal source endpoints
+# URLs are placeholders — update when portal is available.
+
+sources:
+  calls_for_service:
+    label: "Berkeley Police Calls for Service"
+    portal: "data.cityofberkeley.info"
+    dataset_id: "k2nh-s5h5"
+    format: "geojson"
+    url: "https://data.cityofberkeley.info/resource/k2nh-s5h5.geojson"  # TODO: verify URL
+    staged_filename: "callsforservice_csv.geojson"
+    # Field names inside GeoJSON properties — verify against actual data:
+    date_field: "CreateDatetime"
+    type_field: "Call_Type"
+    # lat/lon extracted from GeoJSON geometry, not from property fields
+
+  stops:
+    label: "Berkeley Police Stop Data"
+    portal: "data.cityofberkeley.info"
+    dataset_id: "sg85-5hbb"
+    format: "geojson"
+    url: "https://data.cityofberkeley.info/resource/sg85-5hbb.geojson"  # TODO: verify URL
+    staged_filename: "stops.geojson"
+    date_field: "date_of_stop"
+
+  council_districts:
+    label: "Berkeley Council Districts"
+    portal: "data.cityofberkeley.info"
+    dataset_id: "qnky-x6t5"
+    format: "geojson"
+    url: "https://data.cityofberkeley.info/resource/qnky-x6t5.geojson"  # TODO: verify URL
+    staged_filename: "council_districts.geojson"

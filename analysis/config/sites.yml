@@ -1,0 +1,38 @@
+# Study sites — motel / hotel conversions to interim or permanent supportive housing.
+# opening_date: first day of full or substantial occupancy (YYYY-MM-DD).
+sites:
+  - id: site_1461
+    address: "1461 University Ave"
+    label: "1461 University"
+    lat: 37.8706
+    lon: -122.2836
+    opening_date: "2021-07-01"
+    program_type: "Interim housing / shelter"
+    notes: ""
+
+  - id: site_1619
+    address: "1619 University Ave"
+    label: "1619 University"
+    lat: 37.8710
+    lon: -122.2863
+    opening_date: "2023-07-31"
+    program_type: "Reentry / supportive housing"
+    notes: ""
+
+  - id: site_1761
+    address: "1761 University Ave"
+    label: "1761 University"
+    lat: 37.8715
+    lon: -122.2887
+    opening_date: "2026-02-01"   # TODO: verify
+    program_type: "Interim housing"
+    notes: ""
+
+  - id: site_golden_bear
+    address: "1620 San Pablo Ave"
+    label: "Golden Bear Inn"
+    lat: 37.8719
+    lon: -122.2898
+    opening_date: "2023-01-01"
+    program_type: "Permanent supportive housing"
+    notes: "Homekey project; joint application by City, BACS, and Memar. Formerly 44-room Golden Bear Inn hotel. Full occupancy January 2023. Services by Bay Area Community Services (BACS). Serves chronically homeless households."

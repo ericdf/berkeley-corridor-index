@@ -1,0 +1,43 @@
+# Core study parameters
+
+pre_post_window_months: 12
+
+# Zone radii in meters (approximate street-block equivalents)
+zones:
+  site_block_m: 100
+  adjacent_blocks_m: 300
+  wider_nearby_m: 600
+
+rolling_yoy_window_months: 3
+
+# Call types treated as non-traffic
+non_traffic_call_types:
+  - disturbance
+  - trespassing
+  - suspicious person
+  - suspicious vehicle
+  - welfare check
+  - mentally ill
+  - "5150"
+  - theft
+  - robbery
+  - assault
+  - battery
+  - vandalism
+  - encampment
+  - noise
+  - fight
+  - person down
+
+# Control corridors
+control_corridors:
+  north_shattuck:
+    label: "North Shattuck"
+    center_lat: 37.8793
+    center_lon: -122.2696
+    radius_m: 500
+  south_telegraph:
+    label: "South Telegraph"
+    center_lat: 37.8574
+    center_lon: -122.2595
+    radius_m: 500

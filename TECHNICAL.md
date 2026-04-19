@@ -1,5 +1,43 @@
 # Berkeley Interim Housing Site Analysis — Technical Specification
 
+## Architectural Changes from Original Spec
+
+The following deviations from the original spec were made during implementation based on actual data and constraints encountered.
+
+### Sites
+
+- **1512 University Ave removed** — determined not to be a motel conversion.
+- **1620 San Pablo Ave (Golden Bear Inn) added** — Homekey project, full occupancy January 2023, operated by Bay Area Community Services (BACS). Located on San Pablo, not University Ave.
+
+### Data sources
+
+- **Calls for service is GeoJSON, not CSV/JSON.** The portal export is `callsforservice_csv.geojson`. All source files are treated as GeoJSON; coordinates are extracted from feature geometry where present.
+- **Calls for service has no geometry.** All features have `geometry: null`. Locations are block-level street addresses in the `Block_Address` property field. A geocoding step was added to resolve coordinates (see below).
+- **Arrests data dropped.** `Arrests_Log.geojson` has no address or location fields and null geometry throughout. Spatial analysis is not possible with this file. It is excluded from the pipeline.
+- **Field names differ from spec.** Actual field names: `CreateDatetime` (date), `Call_Type` (call type). Configured in `analysis/config/data_sources.yml`.
+- **Portal URLs unverified.** URLs in `data_sources.yml` are placeholders. The portal was offline during initial development. Verify dataset IDs before running `fetch_portal_data.py`.
+
+### Pipeline
+
+- **Geocoding step added** (`geocode_calls.py`, step 2). Block addresses are geocoded using the U.S. Census batch geocoder (free, no API key required). Results are cached to `data/interim/address_coords_cache.parquet`. First run takes ~30 seconds for ~5,800 unique addresses; subsequent runs use the cache. Match rate is approximately 85%.
+- **Pipeline step order:** stage → geocode → validate → build zones → pre/post → spillover → rolling YoY → controls → export. The geocode step must run before validate so row counts are meaningful.
+- **`pyarrow` required.** Added to `requirements.txt` as the parquet engine for pandas.
+- **`python-dateutil` required** for `relativedelta`. Installed as a dependency of pandas.
+
+### Pre/post analysis
+
+- **Insufficient post-period flag.** Sites where less than 50% of the 12-month post-window falls within the available data range are marked `post_sufficient = false`. Post count and percent change are set to null in CSV outputs. Pre count is always shown.
+- **Operator logging for partial post periods.** Even for insufficient sites, the pipeline computes and logs the partial post count, an annualized estimate, and a flag if the annualized rate exceeds the pre-period by more than 20%.
+- **Boolean columns written as lowercase strings** (`"true"`/`"false"`) to ensure correct parsing by `d3.autoType` in the browser.
+
+### Technology
+
+- **`pyarrow>=14.0`** added to `requirements.txt`.
+- **`js-yaml`** and **`luxon`** added to `package.json` (used by Eleventy data files and date filters).
+- **Build metadata** served at `/data/metadata/build.json` (not `/data/processed/metadata/build.json`).
+
+---
+
 ## Project Goal
 
 Build a public-facing GitHub Pages website presenting a Berkeley policy analysis of four University Avenue converted motel / interim housing sites.

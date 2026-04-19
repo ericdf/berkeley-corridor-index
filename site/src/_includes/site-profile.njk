@@ -1,0 +1,52 @@
+---
+layout: base.njk
+---
+
+<article class="site-profile">
+  <header class="profile-header">
+    <h1>{{ address }}</h1>
+    {% if program_type %}<p class="program-type">{{ program_type }}</p>{% endif %}
+    {% if opening_date %}<p class="opening-date">Opened approximately: <strong>{{ opening_date }}</strong></p>{% endif %}
+  </header>
+
+  <section class="profile-map">
+    <h2>Location</h2>
+    <div id="profile-map" class="map-container map-small" data-lat="{{ lat }}" data-lon="{{ lon }}" data-address="{{ address }}"></div>
+  </section>
+
+  <section class="profile-charts">
+    <h2>Non-Traffic Calls: Before and After</h2>
+    <div id="chart-site-prepost" class="chart-container" data-site="{{ site_id }}" aria-label="Pre/post calls for {{ address }}">
+      <p class="chart-loading">Loading chart…</p>
+    </div>
+
+    <h2>Zone Spillover</h2>
+    <div id="chart-site-zones" class="chart-container" data-site="{{ site_id }}" aria-label="Zone comparison for {{ address }}">
+      <p class="chart-loading">Loading chart…</p>
+    </div>
+
+    <h2>Rolling Year-over-Year Trend</h2>
+    <div id="chart-site-rolling" class="chart-container" data-site="{{ site_id }}" data-opening="{{ opening_date }}" aria-label="Rolling YoY for {{ address }}">
+      <p class="chart-loading">Loading chart…</p>
+    </div>
+  </section>
+
+  <section class="profile-downloads">
+    <h2>Downloads</h2>
+    <ul>
+      <li><a href="/downloads/site_level_results.csv">Site-level results (all sites)</a></li>
+      <li><a href="/data/charts/zone_comparison_nontraffic_calls.csv">Zone comparison data</a></li>
+      <li><a href="/data/charts/rolling_3mo_yoy_nontraffic_calls.csv">Rolling YoY data</a></li>
+    </ul>
+  </section>
+
+  {% if content %}
+  <section class="profile-notes">
+    {{ content | safe }}
+  </section>
+  {% endif %}
+</article>
+
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script src="/assets/js/site-profile.js" type="module"></script>

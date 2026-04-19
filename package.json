@@ -1,0 +1,20 @@
+{
+  "name": "motel-conversions-site",
+  "version": "1.0.0",
+  "description": "Berkeley interim housing site analysis — public-facing GitHub Pages site",
+  "scripts": {
+    "dev": "eleventy --serve",
+    "build": "eleventy",
+    "analyze": "python analysis/run_pipeline.py",
+    "refresh-data": "python analysis/src/fetch_portal_data.py && python analysis/src/stage_inputs.py",
+    "full-build": "npm run analyze && npm run build",
+    "refresh-and-build": "npm run refresh-data && npm run analyze && npm run build"
+  },
+  "dependencies": {
+    "js-yaml": "^4.1.0",
+    "luxon": "^3.4.0"
+  },
+  "devDependencies": {
+    "@11ty/eleventy": "^3.0.0"
+  }
+}
