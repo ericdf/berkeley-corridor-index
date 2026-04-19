@@ -1,4 +1,4 @@
-// Benchmark page — percentile dot plot, histogram, and Leaflet hotspot map
+// Benchmark page — pre/post percentile comparison, rate change, histogram, hotspot map
 
 async function loadCsv(path) {
   const res = await fetch(path);
@@ -15,39 +15,44 @@ async function loadJson(path) {
 function clearLoading(el) { el.querySelector(".chart-loading")?.remove(); }
 function renderError(el, msg) { el.innerHTML = `<p class="chart-loading" style="color:#c00">${msg}</p>`; }
 
-// Chart 1: Dot plot of site percentile rankings
-async function renderPercentileDot() {
-  const el = document.getElementById("chart-percentile-dot");
+// Chart 1: Connected dot plot — pre vs post percentile per site
+async function renderPrePostPercentile() {
+  const el = document.getElementById("chart-pre-post-pct");
   if (!el) return;
   try {
     const data = await loadCsv("/data/charts/site_percentiles.csv");
     clearLoading(el);
 
+    // Build long-form rows for connected dots
+    const rows = data.flatMap(d => [
+      { address: d.address, period: "Before opening", pct: d.pre_percentile_citywide },
+      { address: d.address, period: "After opening",  pct: d.percentile_citywide },
+    ]);
+
     const plot = Plot.plot({
       marginLeft: 170,
       marginTop: 20,
       marginBottom: 50,
-      x: {
-        label: "Citywide percentile (non-traffic calls within 100m)",
-        domain: [0, 100],
-        grid: true,
-      },
+      x: { label: "Citywide percentile", domain: [0, 100], grid: true },
       y: { label: null },
+      color: { legend: true, domain: ["Before opening", "After opening"], range: ["#aaa", "#2a5f9e"] },
       marks: [
-        Plot.ruleX([90], { stroke: "#c00", strokeDasharray: "4 3", strokeOpacity: 0.7 }),
-        Plot.text([{ x: 90, label: "90th pct" }], {
-          x: "x", y: () => null, text: "label",
-          frameAnchor: "top", dy: 6, fill: "#c00", fontSize: 10,
-        }),
-        Plot.dot(data, {
-          x: "percentile_citywide",
+        Plot.ruleX([90], { stroke: "#c00", strokeDasharray: "4 3", strokeOpacity: 0.6 }),
+        // Connecting lines
+        Plot.line(rows, {
+          x: "pct",
           y: "address",
-          fill: "#2a5f9e",
+          z: "address",
+          stroke: "#ccc",
+          strokeWidth: 1.5,
+        }),
+        Plot.dot(rows, {
+          x: "pct",
+          y: "address",
+          fill: "period",
           r: 7,
           tip: true,
-          title: d =>
-            `${d.address}\n${d.call_count_100m.toLocaleString()} calls in 100m zone\nCitywide: ${d.percentile_citywide}th percentile` +
-            (d.percentile_flats != null ? `\nFlats-only: ${d.percentile_flats}th percentile` : ""),
+          title: d => `${d.address}\n${d.period}\n${d.pct}th percentile citywide`,
         }),
       ],
     });
@@ -58,7 +63,45 @@ async function renderPercentileDot() {
   }
 }
 
-// Chart 2: Histogram of citywide distribution with site markers
+// Chart 2: Grouped bars — pre vs post monthly rate
+async function renderRateChange() {
+  const el = document.getElementById("chart-rate-change");
+  if (!el) return;
+  try {
+    const data = await loadCsv("/data/charts/site_percentiles.csv");
+    clearLoading(el);
+
+    const rows = data.flatMap(d => [
+      { address: d.address, period: "Before opening", rate: d.pre_rate_per_month },
+      { address: d.address, period: "After opening",  rate: d.post_rate_per_month },
+    ]);
+
+    const plot = Plot.plot({
+      marginLeft: 170,
+      marginTop: 20,
+      marginBottom: 50,
+      x: { label: "Non-traffic calls / month (100m radius)", grid: true },
+      y: { label: null },
+      color: { legend: true, domain: ["Before opening", "After opening"], range: ["#aaa", "#2a5f9e"] },
+      marks: [
+        Plot.barX(rows, {
+          x: "rate",
+          y: "address",
+          fill: "period",
+          tip: true,
+          title: d => `${d.address}\n${d.period}: ${d.rate} calls/month`,
+        }),
+        Plot.ruleX([0]),
+      ],
+    });
+    el.appendChild(plot);
+  } catch (e) {
+    renderError(el, "Chart data not yet available. Run the analysis pipeline first.");
+    console.warn(e);
+  }
+}
+
+// Chart 3: Histogram of citywide distribution with site markers
 async function renderDistribution() {
   const el = document.getElementById("chart-distribution");
   if (!el) return;
@@ -72,8 +115,8 @@ async function renderDistribution() {
     const plot = Plot.plot({
       marginLeft: 55,
       marginTop: 30,
-      marginBottom: 50,
-      x: { label: "Non-traffic calls within 100m radius", grid: true },
+      marginBottom: 60,
+      x: { label: "Non-traffic calls within 100m (all period)", grid: true },
       y: { label: "Grid points", grid: true },
       marks: [
         Plot.rectY(grid, Plot.binX({ y: "count" }, {
@@ -83,14 +126,9 @@ async function renderDistribution() {
           thresholds: 40,
         })),
         Plot.ruleY([0]),
-        // Site markers
-        ...sites.map(s =>
-          Plot.ruleX([s.call_count_100m], {
-            stroke: "#c00",
-            strokeDasharray: "4 3",
-            strokeOpacity: 0.8,
-          })
-        ),
+        ...sites.map(s => Plot.ruleX([s.call_count_100m], {
+          stroke: "#c00", strokeDasharray: "4 3", strokeOpacity: 0.8,
+        })),
         Plot.text(sites, {
           x: "call_count_100m",
           y: () => null,
@@ -115,13 +153,10 @@ async function initBenchmarkMap() {
   const mapEl = document.getElementById("benchmark-map");
   if (!mapEl) return;
 
-  const BERKELEY_CENTER = [37.872, -122.280];
-  const map = L.map("benchmark-map").setView(BERKELEY_CENTER, 13);
-
+  const map = L.map("benchmark-map").setView([37.872, -122.280], 13);
   L.tileLayer("https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png", {
     attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/">CARTO</a>',
-    subdomains: "abcd",
-    maxZoom: 19,
+    subdomains: "abcd", maxZoom: 19,
   }).addTo(map);
 
   function pctColor(pct) {
@@ -152,27 +187,22 @@ async function initBenchmarkMap() {
     }).addTo(map);
   } catch (e) { console.warn("Benchmark points unavailable:", e.message); }
 
-  // Study site markers on top
   try {
     const sites = await loadJson("/data/maps/sites.geojson");
     L.geoJSON(sites, {
       pointToLayer(feature, latlng) {
         return L.circleMarker(latlng, {
-          radius: 8,
-          fillColor: "#c00",
-          color: "#800",
-          weight: 1.5,
-          fillOpacity: 0.9,
+          radius: 8, fillColor: "#c00", color: "#800", weight: 1.5, fillOpacity: 0.9,
         });
       },
       onEachFeature(feature, layer) {
-        const p = feature.properties;
-        layer.bindPopup(`<strong>${p.address}</strong><br>Study site`);
+        layer.bindPopup(`<strong>${feature.properties.address}</strong><br>Study site`);
       },
     }).addTo(map);
   } catch (e) { console.warn("Sites unavailable:", e.message); }
 }
 
-renderPercentileDot();
+renderPrePostPercentile();
+renderRateChange();
 renderDistribution();
 initBenchmarkMap();
