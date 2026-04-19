@@ -19,8 +19,11 @@ We placed a 100 m grid across the entire city (~2,700 points) and counted non-tr
 </div>
 
 <p class="chart-note">
-  Connected dots show each site's citywide percentile rank before opening (hollow) and after opening (filled),
-  both expressed as annualized monthly rates so the two periods are comparable.
+  Connected dots show each site's percentile rank before opening (gray) and after opening (blue),
+  expressed as annualized monthly rates so the two periods are comparable.
+  Top panel: ranked against all ~2,700 Berkeley grid points.
+  Bottom panel: ranked against the ~367 grid points within 75m of a primary or secondary road —
+  a more like-for-like comparison for sites on major commercial corridors.
   A rightward shift means the site became relatively more active after opening.
 </p>
 
@@ -76,14 +79,29 @@ We placed a 100 m grid across the entire city (~2,700 points) and counted non-tr
 
 ## Interpretation
 
-All four sites were **above the 82nd percentile citywide before any conversion opened** — these were not quiet blocks before the projects launched. That said, pre-existing elevation does not diminish what happened after:
+### Which comparison universe is right?
 
-- **1461 University**: 11.5 → 18.8 calls/month — a **+64% rate increase**, the largest in absolute terms
+The citywide percentiles (91st–99th) include quiet residential streets, parks, and hillside neighborhoods — not a fair comparison for sites on University and San Pablo Avenues. The corridor-only universe (367 grid points on or near primary and secondary roads) is the more appropriate baseline.
+
+Against that benchmark, the picture is more mixed:
+
+| Site | Pre (corridor pct) | Post (corridor pct) | Rate change |
+|------|--------------------|---------------------|-------------|
+| 1461 University | 87th | 96th | +64% |
+| 1761 University | 87th | 91th | +24% |
+| 1620 San Pablo | 67th | 82nd | +105% |
+| 1619 University | 55th | 68th | +92% |
+
+Two sites (1461 and 1761 University) were already in the top decile of major-corridor locations before opening. Two others (San Pablo, 1619 University) were elevated but not exceptional — and moved up substantially after opening.
+
+The rate increases are notable regardless of the comparison universe:
+
+- **1461 University**: 11.5 → 18.8 calls/month — **+64%**, the largest in absolute terms
 - **1620 San Pablo**: 3.9 → 8.0 calls/month — rate **more than doubled**
 - **1619 University**: 2.5 → 4.8 calls/month — rate **nearly doubled**
-- **1761 University**: 11.3 → 14.0 calls/month — modest increase, but post period is only ~2 months
+- **1761 University**: 11.3 → 14.0 calls/month — post period is only ~2 months
 
-These are substantial increases. The fact that some locations were already elevated before opening is relevant context, but it does not explain away a 64–105% rise in call rates. The [indexed comparison with control corridors](/findings/) examines whether call rates rose citywide during the same period, which is the most direct way to assess how much of this increase is attributable to the sites versus broader trends.
+The [indexed comparison with control corridors](/findings/) examines whether major Berkeley corridors generally trended upward during this period, which is the most direct way to assess how much of these increases are attributable to the conversions versus broader trends.
 
 Percentile rankings are descriptive only. Higher call counts may reflect mixed-use corridor activity, transit access, existing disorder patterns, or service clustering — not necessarily resident misconduct.
 

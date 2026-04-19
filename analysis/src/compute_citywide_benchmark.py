@@ -1,16 +1,22 @@
 """Compute citywide 100m-grid benchmark for non-traffic call concentration.
 
 Generates a regular 100m grid across Berkeley, counts non-traffic calls
-within 100m of each grid point, and ranks the study sites against the
-citywide (and optionally flats-only) distribution.
+within 100m of each grid point, and ranks the study sites against three
+benchmark universes:
 
-Computes both all-period and pre-opening-only rankings so the benchmark
-page can show whether sites were already high-activity before conversion.
+  citywide     — all ~2,700 grid points within Berkeley boundary
+  flats        — grid points in the Berkeley flatlands (optional)
+  corridor     — grid points within 75m of a primary/secondary OSM road
+
+The corridor universe is the most apples-to-apples comparison for sites
+on major commercial streets.
+
+Computes both all-period and pre-opening-only rankings.
 
 Outputs:
-  data/processed/charts/citywide_benchmark_points.csv   — grid point metrics
-  data/processed/charts/site_percentiles.csv            — site rankings (all-period + pre-opening)
-  data/processed/maps/citywide_benchmark_points.geojson — for Leaflet map
+  data/processed/charts/citywide_benchmark_points.csv
+  data/processed/charts/site_percentiles.csv
+  data/processed/maps/citywide_benchmark_points.geojson
 """
 
 import sys
@@ -114,6 +120,17 @@ def main() -> None:
         grid["in_flats"] = False
         log("berkeley_flats.geojson absent — flats percentile skipped")
 
+    # Major roads corridor layer (primary + secondary OSM roads, buffered 75m)
+    roads_path = REFERENCE_DIR / "berkeley_major_roads.geojson"
+    if roads_path.exists():
+        roads = gpd.read_file(roads_path).to_crs(CRS_PROJ)
+        roads_poly = unary_union(roads.geometry.buffer(75))
+        grid["in_corridor"] = grid.geometry.within(roads_poly)
+        log(f"Corridor (primary+secondary roads ±75m): {grid['in_corridor'].sum():,} of {len(grid):,} grid points")
+    else:
+        grid["in_corridor"] = False
+        log("berkeley_major_roads.geojson absent — run fetch_osm_roads.py to generate")
+
     # Percentiles against all-period distribution
     all_dist = grid["call_count_100m"].values
     grid["percentile_citywide"] = [percentile_of(v, all_dist) for v in all_dist]
@@ -126,21 +143,42 @@ def main() -> None:
             percentile_of(v, flats_dist) for v in grid.loc[flats_mask, "call_count_100m"]
         ]
 
+    corridor_mask = grid["in_corridor"]
+    corridor_dist = grid.loc[corridor_mask, "call_count_100m"].values if corridor_mask.any() else None
+    pre_corridor_dist = grid.loc[corridor_mask, "pre_count_annualized"].values if corridor_mask.any() else None
+    grid["percentile_corridor"] = np.nan
+    if corridor_dist is not None:
+        grid.loc[corridor_mask, "percentile_corridor"] = [
+            percentile_of(v, corridor_dist) for v in grid.loc[corridor_mask, "call_count_100m"]
+        ]
+        log(f"Corridor distribution — median: {np.median(corridor_dist):.0f}, "
+            f"90th pct: {np.percentile(corridor_dist, 90):.0f}, max: {corridor_dist.max()}")
+
     # Pre-opening percentiles (rank pre-annualized against same annualized pre distribution)
     pre_ann_dist = grid["pre_count_annualized"].values
     grid["percentile_citywide_pre"] = [percentile_of(v, pre_ann_dist) for v in pre_ann_dist]
+
+    # Pre-opening corridor percentile
+    grid["percentile_corridor_pre"] = np.nan
+    if corridor_mask.any():
+        grid.loc[corridor_mask, "percentile_corridor_pre"] = [
+            percentile_of(v, pre_corridor_dist) for v in grid.loc[corridor_mask, "pre_count_annualized"]
+        ]
 
     # Export grid CSV + GeoJSON
     grid_geo = grid.to_crs(CRS_GEO)
     grid_geo["lon"] = grid_geo.geometry.x.round(6)
     grid_geo["lat"] = grid_geo.geometry.y.round(6)
     grid_geo[["grid_id", "lon", "lat", "call_count_100m", "pre_count_100m",
-               "percentile_citywide", "percentile_citywide_pre", "percentile_flats",
-               "in_flats"]].to_csv(CHARTS_DIR / "citywide_benchmark_points.csv", index=False)
+               "percentile_citywide", "percentile_citywide_pre",
+               "percentile_flats", "percentile_corridor", "percentile_corridor_pre",
+               "in_flats", "in_corridor"]].to_csv(
+        CHARTS_DIR / "citywide_benchmark_points.csv", index=False
+    )
     log(f"Wrote citywide_benchmark_points.csv ({len(grid_geo):,} rows)")
 
-    grid_geo[["grid_id", "call_count_100m", "percentile_citywide",
-               "percentile_citywide_pre", "in_flats", "geometry"]].to_file(
+    grid_geo[["grid_id", "call_count_100m", "percentile_citywide", "percentile_corridor",
+               "percentile_citywide_pre", "in_flats", "in_corridor", "geometry"]].to_file(
         MAPS_DIR / "citywide_benchmark_points.geojson", driver="GeoJSON"
     )
     log("Wrote citywide_benchmark_points.geojson")
@@ -158,6 +196,8 @@ def main() -> None:
         pct_all = percentile_of(count_all, all_dist)
         pct_pre = percentile_of(count_pre_ann, pre_ann_dist)
         pct_flats = percentile_of(count_all, flats_dist) if flats_dist is not None else None
+        pct_corridor = percentile_of(count_all, corridor_dist) if corridor_dist is not None else None
+        pct_corridor_pre = percentile_of(count_pre_ann, pre_corridor_dist) if corridor_dist is not None else None
 
         site_rows.append({
             "site_id": s["id"],
@@ -165,20 +205,23 @@ def main() -> None:
             "label": s["label"],
             "geography_group": s.get("geography_group", ""),
             "opening_date": s["opening_date"],
-            # All-period (full dataset)
+            # All-period
             "call_count_100m": count_all,
             "percentile_citywide": pct_all,
             "percentile_flats": pct_flats,
+            "percentile_corridor": pct_corridor,
             # Pre-opening
             "pre_count_100m": count_pre,
             "pre_rate_per_month": pre_rate,
             "pre_percentile_citywide": pct_pre,
+            "pre_percentile_corridor": pct_corridor_pre,
             # Post-opening rate
             "post_count_100m": post_count,
             "post_rate_per_month": post_rate,
             "rate_change_pct": round((post_rate - pre_rate) / pre_rate * 100, 1) if pre_rate > 0 else None,
         })
-        log(f"{s['address']}: pre {pre_rate}/mo ({pct_pre}th pct) → post {post_rate}/mo ({pct_all}th pct all-period)")
+        corridor_str = f", corridor {pct_corridor_pre}th→{pct_corridor}th pct" if pct_corridor is not None else ""
+        log(f"{s['address']}: pre {pre_rate}/mo (city {pct_pre}th){corridor_str} → post {post_rate}/mo (city {pct_all}th)")
 
     pd.DataFrame(site_rows).to_csv(CHARTS_DIR / "site_percentiles.csv", index=False)
     log("Wrote site_percentiles.csv")

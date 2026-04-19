@@ -15,7 +15,7 @@ async function loadJson(path) {
 function clearLoading(el) { el.querySelector(".chart-loading")?.remove(); }
 function renderError(el, msg) { el.innerHTML = `<p class="chart-loading" style="color:#c00">${msg}</p>`; }
 
-// Chart 1: Connected dot plot — pre vs post percentile per site
+// Chart 1: Connected dot plot — pre vs post percentile, citywide vs corridor
 async function renderPrePostPercentile() {
   const el = document.getElementById("chart-pre-post-pct");
   if (!el) return;
@@ -23,36 +23,32 @@ async function renderPrePostPercentile() {
     const data = await loadCsv("/data/charts/site_percentiles.csv");
     clearLoading(el);
 
-    // Build long-form rows for connected dots
+    // Four rows per site: pre/post × citywide/corridor
     const rows = data.flatMap(d => [
-      { address: d.address, period: "Before opening", pct: d.pre_percentile_citywide },
-      { address: d.address, period: "After opening",  pct: d.percentile_citywide },
-    ]);
+      { address: d.address, universe: "Citywide", period: "Before opening", pct: d.pre_percentile_citywide },
+      { address: d.address, universe: "Citywide", period: "After opening",  pct: d.percentile_citywide },
+      { address: d.address, universe: "Major corridors only", period: "Before opening", pct: d.pre_percentile_corridor },
+      { address: d.address, universe: "Major corridors only", period: "After opening",  pct: d.percentile_corridor },
+    ]).filter(d => d.pct != null);
 
     const plot = Plot.plot({
       marginLeft: 170,
       marginTop: 20,
       marginBottom: 50,
-      x: { label: "Citywide percentile", domain: [0, 100], grid: true },
+      x: { label: "Percentile rank within universe", domain: [0, 100], grid: true },
       y: { label: null },
+      fy: { label: null, padding: 0.3 },
       color: { legend: true, domain: ["Before opening", "After opening"], range: ["#aaa", "#2a5f9e"] },
       marks: [
-        Plot.ruleX([90], { stroke: "#c00", strokeDasharray: "4 3", strokeOpacity: 0.6 }),
-        // Connecting lines
+        Plot.ruleX([90], { stroke: "#c00", strokeDasharray: "4 3", strokeOpacity: 0.5 }),
         Plot.line(rows, {
-          x: "pct",
-          y: "address",
-          z: "address",
-          stroke: "#ccc",
-          strokeWidth: 1.5,
+          x: "pct", y: "address", z: "address",
+          fy: "universe", stroke: "#ddd", strokeWidth: 1.5,
         }),
         Plot.dot(rows, {
-          x: "pct",
-          y: "address",
-          fill: "period",
-          r: 7,
-          tip: true,
-          title: d => `${d.address}\n${d.period}\n${d.pct}th percentile citywide`,
+          x: "pct", y: "address", fill: "period",
+          fy: "universe", r: 7, tip: true,
+          title: d => `${d.address}\n${d.period}\n${d.pct}th percentile (${d.universe})`,
         }),
       ],
     });
