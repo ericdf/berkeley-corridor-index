@@ -1,6 +1,6 @@
-// Maps page — Leaflet map: corridor polygon (primary), site markers, control corridors
+// Maps page — Leaflet map: separate University core and San Pablo node polygons
 
-const BERKELEY_CENTER = [37.8716, -122.2727];
+const BERKELEY_CENTER = [37.8716, -122.2827];
 const ZOOM = 13;
 
 async function loadGeoJson(path) {
@@ -37,27 +37,38 @@ async function initMap() {
     }).addTo(map);
   } catch (e) { console.warn("Control corridors unavailable:", e.message); }
 
-  // Immediate site zones (secondary, shown lightly)
+  // Immediate site zones (secondary / descriptive)
   try {
     const zones = await loadGeoJson("/data/maps/immediate_site_zones.geojson");
     L.geoJSON(zones, {
       style: { color: "rgba(220,80,60,0.6)", weight: 1, fillColor: "rgba(220,80,60,0.12)", fillOpacity: 1 },
       onEachFeature(feature, layer) {
-        layer.bindPopup(`<strong>${feature.properties.address}</strong><br>Immediate zone (descriptive only)`);
+        layer.bindPopup(`<strong>${feature.properties.address}</strong><br>100m zone (descriptive only)`);
       },
     }).addTo(map);
   } catch (e) { console.warn("Immediate site zones unavailable:", e.message); }
 
-  // Corridor polygon — primary study geography, drawn on top of zones
+  // San Pablo node polygon
   try {
-    const corridor = await loadGeoJson("/data/maps/university_corridor_cluster.geojson");
-    L.geoJSON(corridor, {
-      style: { color: "#2a5f9e", weight: 2.5, fillColor: "#2a5f9e", fillOpacity: 0.08 },
+    const sp = await loadGeoJson("/data/maps/san_pablo_node.geojson");
+    L.geoJSON(sp, {
+      style: { color: "#c47a00", weight: 2.5, fillColor: "#c47a00", fillOpacity: 0.08 },
       onEachFeature(feature, layer) {
-        layer.bindPopup(`<strong>${feature.properties.label}</strong><br>Primary study area`);
+        layer.bindPopup(`<strong>${feature.properties.label}</strong><br>San Pablo node`);
       },
     }).addTo(map);
-  } catch (e) { console.warn("Corridor polygon unavailable:", e.message); }
+  } catch (e) { console.warn("San Pablo node unavailable:", e.message); }
+
+  // University core cluster polygon — primary treatment geography
+  try {
+    const core = await loadGeoJson("/data/maps/university_core_cluster.geojson");
+    L.geoJSON(core, {
+      style: { color: "#2a5f9e", weight: 2.5, fillColor: "#2a5f9e", fillOpacity: 0.08 },
+      onEachFeature(feature, layer) {
+        layer.bindPopup(`<strong>${feature.properties.label}</strong><br>University core cluster (primary study area)`);
+      },
+    }).addTo(map);
+  } catch (e) { console.warn("University core cluster unavailable:", e.message); }
 
   // Site markers — on top of everything
   try {

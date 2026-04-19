@@ -1,7 +1,9 @@
-"""Compute corridor rolling averages and same-season YoY comparisons.
+"""Compute rolling averages for each treatment geography.
 
 Outputs:
-  corridor_rolling_3mo_avg.csv  — monthly calls + 3-month rolling average
+  university_cluster_rolling.csv  — University core 3-month rolling avg
+  san_pablo_rolling.csv           — San Pablo node 3-month rolling avg
+  corridor_rolling_3mo_avg.csv    — legacy alias (university cluster, for backwards compat)
 """
 
 import sys
@@ -13,17 +15,14 @@ sys.path.insert(0, str(Path(__file__).parents[1]))
 from src.utils import CHARTS_DIR, ensure_dirs, log
 
 
-def main() -> pd.DataFrame:
-    ensure_dirs()
-
-    monthly = pd.read_csv(CHARTS_DIR / "corridor_monthly_calls.csv", parse_dates=["date"])
+def rolling_avg(src_csv: str, dest_csv: str) -> pd.DataFrame:
+    monthly = pd.read_csv(CHARTS_DIR / src_csv, parse_dates=["date"])
     monthly = monthly.sort_values("date").reset_index(drop=True)
 
     monthly["rolling_3mo_avg"] = (
         monthly["non_traffic_count"].rolling(window=3, min_periods=1).mean().round(1)
     )
 
-    # Same-season YoY: compare each month to the same month previous year
     monthly["month_key"] = monthly["date"].dt.month
     monthly["year"] = monthly["date"].dt.year
     prior = monthly[["year", "month_key", "non_traffic_count"]].copy()
@@ -36,11 +35,20 @@ def main() -> pd.DataFrame:
         / monthly["prior_year_count"] * 100
     ).round(1)
 
-    monthly.drop(columns=["month_key"]).to_csv(
-        CHARTS_DIR / "corridor_rolling_3mo_avg.csv", index=False
-    )
-    log("Wrote corridor_rolling_3mo_avg.csv")
+    monthly.drop(columns=["month_key"]).to_csv(CHARTS_DIR / dest_csv, index=False)
+    log(f"Wrote {dest_csv}")
     return monthly
+
+
+def main() -> None:
+    ensure_dirs()
+    rolling_avg("university_cluster_monthly.csv", "university_cluster_rolling.csv")
+    rolling_avg("san_pablo_monthly.csv", "san_pablo_rolling.csv")
+    # Legacy alias consumed by chart-hero.js and older chart code
+    import shutil
+    shutil.copy(CHARTS_DIR / "university_cluster_rolling.csv",
+                CHARTS_DIR / "corridor_rolling_3mo_avg.csv")
+    log("Wrote corridor_rolling_3mo_avg.csv (legacy alias of university_cluster_rolling.csv)")
 
 
 if __name__ == "__main__":

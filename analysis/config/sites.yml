@@ -8,6 +8,7 @@ sites:
     lon: -122.283223824503
     opening_date: "2021-07-01"
     program_type: "Interim housing / shelter"
+    geography_group: university_core
     notes: ""
 
   - id: site_1619
@@ -17,6 +18,7 @@ sites:
     lon: -122.278872531448
     opening_date: "2023-07-31"
     program_type: "Reentry / supportive housing"
+    geography_group: university_core
     notes: ""
 
   - id: site_1761
@@ -26,6 +28,7 @@ sites:
     lon: -122.276199756069
     opening_date: "2026-02-01"   # TODO: verify
     program_type: "Interim housing"
+    geography_group: university_core
     notes: ""
 
   - id: site_golden_bear
@@ -35,4 +38,5 @@ sites:
     lon: -122.294171617035
     opening_date: "2023-01-01"
     program_type: "Permanent supportive housing"
+    geography_group: san_pablo_node
     notes: "Homekey project; joint application by City, BACS, and Memar. Formerly 44-room Golden Bear Inn hotel. Full occupancy January 2023. Services by Bay Area Community Services (BACS). Serves chronically homeless households."

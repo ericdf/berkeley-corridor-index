@@ -1,13 +1,13 @@
 ---
 layout: base.njk
 title: Home
-description: Data analysis of non-traffic police calls along the University Avenue corridor near four interim housing conversions in Berkeley.
+description: Data analysis of non-traffic police calls near four Berkeley motel and hotel conversions to interim and supportive housing.
 ---
 
 <section class="hero">
   <h1>Berkeley Interim Housing: Police Call Analysis</h1>
   <p class="lead">
-    Did non-traffic police calls increase along the University Avenue corridor as four motel and hotel properties were converted to interim and supportive housing?
+    Non-traffic police calls are heavily concentrated near four Berkeley motel and hotel properties converted to interim and supportive housing.
     This site presents an evidence-based analysis using public Berkeley Police data.
   </p>
   <p class="scope-note">
@@ -16,12 +16,11 @@ description: Data analysis of non-traffic police calls along the University Aven
 </section>
 
 <section class="hero-chart">
-  <div id="chart-hero" class="chart-container" aria-label="Monthly non-traffic calls along the University Avenue corridor">
+  <div id="chart-hero" class="chart-container" aria-label="Share of non-traffic calls within 100m of each study site">
     <p class="chart-loading">Loading chart…</p>
   </div>
   <p class="chart-note">
-    Monthly non-traffic police calls within the University Avenue corridor cluster.
-    Dashed lines mark each site opening date.
+    Share of all non-traffic calls within the combined study area that fall within 100 m of each site.
     <a href="/findings/">View full findings →</a>
   </p>
 </section>
@@ -30,8 +29,8 @@ description: Data analysis of non-traffic police calls along the University Aven
   <h2>Sites Studied</h2>
   <p>
     Four motel and hotel properties converted to housing, shelter, or reentry programs.
-    Because the sites are clustered along the same corridor, the primary analysis treats them as a shared corridor environment
-    rather than four separate neighborhood experiments.
+    The three University Avenue sites form a tight geographic cluster and are analyzed together.
+    The San Pablo site is geographically distinct and is analyzed separately.
   </p>
   <ul class="card-list">
     <li class="card">
@@ -56,7 +55,7 @@ description: Data analysis of non-traffic police calls along the University Aven
       </a>
     </li>
     <li class="card">
-      <a href="/site-profiles/golden-bear/">
+      <a href="/site-profiles/1620-san-pablo/">
         <strong>1620 San Pablo Ave</strong>
         <span class="card-type">Permanent supportive housing (Golden Bear Inn)</span>
         <span class="card-date">Opened January 2023</span>
@@ -68,10 +67,11 @@ description: Data analysis of non-traffic police calls along the University Aven
 <section class="key-questions">
   <h2>Key Questions</h2>
   <ul>
-    <li>Did corridor non-traffic calls rise after successive site openings?</li>
-    <li>Did the corridor diverge from comparable Berkeley commercial areas?</li>
-    <li>Were effects cumulative as more sites opened, or nonlinear?</li>
-    <li>Did individual site blocks show localized changes near their opening dates?</li>
+    <li>What share of non-traffic calls in the study area occur within 100 m of each site?</li>
+    <li>Did that concentration increase after site openings?</li>
+    <li>Did the University core cluster diverge from comparable Berkeley commercial areas?</li>
+    <li>Did the San Pablo node show different patterns from the University cluster?</li>
+    <li>Did adjacent blocks show spillover beyond the immediate site area?</li>
   </ul>
   <p><a href="/findings/" class="btn">View Findings</a></p>
 </section>
@@ -79,11 +79,13 @@ description: Data analysis of non-traffic police calls along the University Aven
 <section class="about-data">
   <h2>Data and Methods</h2>
   <p>
-    Analysis uses Berkeley's public calls-for-service data. We focused on non-traffic calls —
-    disturbances, welfare checks, theft, and similar public-safety calls.
-    Because the four sites sit close together along University Avenue, broad neighborhood buffers
-    overlap substantially. To avoid double-counting, the primary analysis treats the corridor as
-    a single treatment area and each opening date as a sequential intervention event.
+    Analysis uses Berkeley's public calls-for-service data, geocoded from block addresses using the U.S. Census batch geocoder.
+    We focused on non-traffic calls — disturbances, welfare checks, theft, and similar public-safety calls.
+  </p>
+  <p>
+    The three University Avenue sites are clustered closely enough that broad neighborhood buffers overlap substantially.
+    They are treated as a shared cluster environment with each opening date as a sequential intervention event.
+    The San Pablo site is geographically separate and analyzed independently.
   </p>
   <p>
     <a href="/methodology/">Read the full methodology</a> &middot;

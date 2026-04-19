@@ -186,6 +186,7 @@ hr { border: none; border-top: 1px solid var(--color-border); margin: var(--spac
 .card-date { display: block; font-size: 0.8rem; color: var(--color-text-muted); font-family: var(--font-ui); margin-top: 0.2rem; }
 .hero-chart { margin-bottom: var(--spacing-xl); }
 .corridor-swatch { background: rgba(42,95,158,0.15); border: 2px solid rgba(42,95,158,0.6); }
+.san-pablo-swatch { background: rgba(196,122,0,0.12); border: 2px solid rgba(196,122,0,0.6); }
 .control-swatch { background: rgba(136,136,136,0.12); border: 1px dashed #888; }
 
 /* ===== Button ===== */

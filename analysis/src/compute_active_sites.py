@@ -17,7 +17,7 @@ def main() -> pd.DataFrame:
     ensure_dirs()
     sites = load_sites()
 
-    monthly = pd.read_csv(CHARTS_DIR / "corridor_monthly_calls.csv", parse_dates=["date"])
+    monthly = pd.read_csv(CHARTS_DIR / "university_cluster_monthly.csv", parse_dates=["date"])
 
     openings = {s["id"]: pd.Timestamp(s["opening_date"]) for s in sites}
 

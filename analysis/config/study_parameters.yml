@@ -3,16 +3,25 @@
 pre_post_window_months: 12
 
 # -------------------------------------------------------------------
-# Corridor-level model (primary analysis)
-# The four study sites are treated as a shared corridor environment.
-# The corridor polygon is the convex hull of all study sites,
-# buffered by corridor_buffer_m, then clipped to a sensible extent.
+# Primary treatment geographies
+# Two distinct spatial clusters analyzed independently.
+# Initial combined corridor incorporated low-activity intervening
+# blocks; final analysis separates the University core from the
+# San Pablo node.
 # -------------------------------------------------------------------
-corridor:
-  label: "University Avenue corridor cluster"
-  buffer_m: 250        # buffer around convex hull of all study sites
-  # Baseline for indexed comparisons: period before first site opening.
-  # Code computes this automatically from sites.yml opening dates.
+university_core:
+  label: "University Avenue core cluster"
+  buffer_m: 250        # buffer around convex hull of the three University sites
+  # Baseline for indexed comparisons: before first site opening in group.
+
+san_pablo_node:
+  label: "San Pablo node"
+  buffer_m: 250        # buffer around 1620 San Pablo point
+
+# Combined appendix geography (reference only — not the primary analysis)
+combined_corridor:
+  label: "All sites combined (appendix)"
+  buffer_m: 250
 
 # Immediate site zones (secondary / descriptive only)
 immediate_zone_m: 100
