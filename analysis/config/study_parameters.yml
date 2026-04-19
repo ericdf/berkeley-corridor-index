@@ -2,7 +2,22 @@
 
 pre_post_window_months: 12
 
-# Zone radii in meters (approximate street-block equivalents)
+# -------------------------------------------------------------------
+# Corridor-level model (primary analysis)
+# The four study sites are treated as a shared corridor environment.
+# The corridor polygon is the convex hull of all study sites,
+# buffered by corridor_buffer_m, then clipped to a sensible extent.
+# -------------------------------------------------------------------
+corridor:
+  label: "University Avenue corridor cluster"
+  buffer_m: 250        # buffer around convex hull of all study sites
+  # Baseline for indexed comparisons: period before first site opening.
+  # Code computes this automatically from sites.yml opening dates.
+
+# Immediate site zones (secondary / descriptive only)
+immediate_zone_m: 100
+
+# Legacy zone radii — retained for site-profile descriptive outputs
 zones:
   site_block_m: 100
   adjacent_blocks_m: 300

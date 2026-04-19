@@ -1,13 +1,7 @@
-// Maps page — Leaflet map with site markers and zone overlays
+// Maps page — Leaflet map: corridor polygon (primary), site markers, control corridors
 
 const BERKELEY_CENTER = [37.8716, -122.2727];
-const ZOOM = 14;
-
-const ZONE_STYLES = {
-  site_block: { color: "rgba(220,80,60,0.8)", fillColor: "rgba(220,80,60,0.2)", weight: 1.5, fillOpacity: 1 },
-  adjacent_blocks: { color: "rgba(240,160,40,0.8)", fillColor: "rgba(240,160,40,0.18)", weight: 1.5, fillOpacity: 1 },
-  wider_nearby: { color: "rgba(60,140,200,0.7)", fillColor: "rgba(60,140,200,0.12)", weight: 1, fillOpacity: 1 },
-};
+const ZOOM = 13;
 
 async function loadGeoJson(path) {
   const res = await fetch(path);
@@ -24,39 +18,48 @@ async function initMap() {
     maxZoom: 19,
   }).addTo(map);
 
-  const zoneFiles = [
-    { path: "/data/maps/wider_nearby_zones.geojson", zone: "wider_nearby" },
-    { path: "/data/maps/adjacent_block_zones.geojson", zone: "adjacent_blocks" },
-    { path: "/data/maps/site_block_zones.geojson", zone: "site_block" },
-  ];
-
-  for (const { path, zone } of zoneFiles) {
-    try {
-      const geojson = await loadGeoJson(path);
-      L.geoJSON(geojson, {
-        style: ZONE_STYLES[zone],
-        onEachFeature(feature, layer) {
-          if (feature.properties?.address) {
-            layer.bindPopup(`<strong>${feature.properties.address}</strong><br>${zone.replace("_", " ")}`);
-          }
-        },
-      }).addTo(map);
-    } catch (e) {
-      console.warn(`Could not load ${path}:`, e.message);
-    }
-  }
-
-  // Council districts
+  // Council district boundaries
   try {
     const districts = await loadGeoJson("/data/maps/council_districts_simplified.geojson");
     L.geoJSON(districts, {
-      style: { color: "#444", weight: 1.5, fill: false, dashArray: "4 3" },
+      style: { color: "#888", weight: 1, fill: false, dashArray: "4 3" },
     }).addTo(map);
-  } catch (e) {
-    console.warn("Council districts not available:", e.message);
-  }
+  } catch (e) { console.warn("Council districts unavailable:", e.message); }
 
-  // Site markers
+  // Control corridors (comparison areas)
+  try {
+    const controls = await loadGeoJson("/data/maps/control_corridors.geojson");
+    L.geoJSON(controls, {
+      style: { color: "#888", weight: 1.5, fillColor: "#888", fillOpacity: 0.08, dashArray: "3 4" },
+      onEachFeature(feature, layer) {
+        if (feature.properties?.label) layer.bindPopup(`<strong>${feature.properties.label}</strong><br>Comparison corridor`);
+      },
+    }).addTo(map);
+  } catch (e) { console.warn("Control corridors unavailable:", e.message); }
+
+  // Immediate site zones (secondary, shown lightly)
+  try {
+    const zones = await loadGeoJson("/data/maps/immediate_site_zones.geojson");
+    L.geoJSON(zones, {
+      style: { color: "rgba(220,80,60,0.6)", weight: 1, fillColor: "rgba(220,80,60,0.12)", fillOpacity: 1 },
+      onEachFeature(feature, layer) {
+        layer.bindPopup(`<strong>${feature.properties.address}</strong><br>Immediate zone (descriptive only)`);
+      },
+    }).addTo(map);
+  } catch (e) { console.warn("Immediate site zones unavailable:", e.message); }
+
+  // Corridor polygon — primary study geography, drawn on top of zones
+  try {
+    const corridor = await loadGeoJson("/data/maps/university_corridor_cluster.geojson");
+    L.geoJSON(corridor, {
+      style: { color: "#2a5f9e", weight: 2.5, fillColor: "#2a5f9e", fillOpacity: 0.08 },
+      onEachFeature(feature, layer) {
+        layer.bindPopup(`<strong>${feature.properties.label}</strong><br>Primary study area`);
+      },
+    }).addTo(map);
+  } catch (e) { console.warn("Corridor polygon unavailable:", e.message); }
+
+  // Site markers — on top of everything
   try {
     const sites = await loadGeoJson("/data/maps/sites.geojson");
     L.geoJSON(sites, {
@@ -74,9 +77,7 @@ async function initMap() {
         layer.bindPopup(`<strong>${p.address}</strong><br>${p.program_type ?? ""}<br>Opened: ${p.opening_date ?? "unknown"}`);
       },
     }).addTo(map);
-  } catch (e) {
-    console.warn("Sites GeoJSON not available:", e.message);
-  }
+  } catch (e) { console.warn("Sites GeoJSON unavailable:", e.message); }
 }
 
 initMap().catch(console.error);

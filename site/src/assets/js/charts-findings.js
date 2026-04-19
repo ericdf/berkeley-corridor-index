@@ -6,57 +6,66 @@ async function loadCsv(path) {
   return d3.csvParse(await res.text(), d3.autoType);
 }
 
-function clearLoading(el) {
-  el.querySelector(".chart-loading")?.remove();
+function clearLoading(el) { el.querySelector(".chart-loading")?.remove(); }
+function renderError(el, msg) { el.innerHTML = `<p class="chart-loading" style="color:#c00">${msg}</p>`; }
+
+function openingMarks(events) {
+  return events.flatMap(d => [
+    Plot.ruleX([new Date(d.opening_date)], { stroke: "#c00", strokeDasharray: "4 3", strokeOpacity: 0.7 }),
+    Plot.text([d], {
+      x: d => new Date(d.opening_date),
+      y: () => null,
+      text: d => String(d.sequence),
+      frameAnchor: "top",
+      dy: 6,
+      fill: "#c00",
+      fontSize: 10,
+      fontWeight: "bold",
+    }),
+  ]);
 }
 
-function renderError(el, msg) {
-  el.innerHTML = `<p class="chart-loading" style="color:#c00">${msg}</p>`;
-}
-
-// Pre/post: side-by-side bars per site; sites with null post get a note instead of an After bar
-async function renderPrePost() {
-  const el = document.getElementById("chart-prepost");
+// Chart 1: Corridor trend with rolling average and opening markers
+async function renderCorridorTrend() {
+  const el = document.getElementById("chart-corridor-trend");
   if (!el) return;
   try {
-    const data = await loadCsv("/data/charts/pre_post_site_nontraffic_calls.csv");
+    const [monthly, rolling, events] = await Promise.all([
+      loadCsv("/data/charts/corridor_monthly_calls.csv"),
+      loadCsv("/data/charts/corridor_rolling_3mo_avg.csv"),
+      loadCsv("/data/charts/corridor_opening_events.csv"),
+    ]);
     clearLoading(el);
 
-    const long = [];
-    const insufficient = [];
-    for (const row of data) {
-      long.push({ address: row.address, period: "Before", count: row.pre_count });
-      if (String(row.post_sufficient).toLowerCase() === "true") {
-        long.push({ address: row.address, period: "After", count: row.post_count });
-      } else {
-        insufficient.push({ address: row.address, count: row.pre_count });
-      }
-    }
-
     const plot = Plot.plot({
-      marginLeft: 160,
-      marginBottom: 40,
-      x: { label: "Non-traffic calls (12-month period)", grid: true },
-      y: { label: null },
-      color: { legend: true, domain: ["Before", "After"], range: ["#9aabbd", "#2a5f9e"] },
+      marginLeft: 55,
+      marginTop: 30,
+      marginBottom: 50,
+      x: { label: null, type: "utc" },
+      y: { label: "Non-traffic calls / month", grid: true },
       marks: [
-        Plot.barX(long, {
-          x: "count",
-          y: "address",
-          fill: "period",
-          dx: d => d.period === "After" ? 1 : 0,
+        Plot.ruleY([0], { stroke: "#ddd" }),
+        Plot.areaY(monthly, {
+          x: d => new Date(d.date),
+          y: "non_traffic_count",
+          fill: "#2a5f9e",
+          fillOpacity: 0.1,
+        }),
+        Plot.line(monthly, {
+          x: d => new Date(d.date),
+          y: "non_traffic_count",
+          stroke: "#2a5f9e",
+          strokeOpacity: 0.35,
+          strokeWidth: 1,
+        }),
+        Plot.line(rolling, {
+          x: d => new Date(d.date),
+          y: "rolling_3mo_avg",
+          stroke: "#2a5f9e",
+          strokeWidth: 2.5,
           tip: true,
         }),
-        // Label sites with insufficient post data
-        Plot.text(insufficient, {
-          x: "count",
-          y: "address",
-          text: () => "  ← insufficient post data",
-          textAnchor: "start",
-          fill: "#888",
-          fontSize: 11,
-        }),
-        Plot.ruleX([0]),
+        ...openingMarks(events),
       ],
     });
     el.appendChild(plot);
@@ -66,45 +75,132 @@ async function renderPrePost() {
   }
 }
 
-// Zone spillover: one facet per site, before/after bars per zone
-async function renderSpillover() {
-  const el = document.getElementById("chart-spillover");
+// Chart 2: Indexed comparison (corridor vs controls, baseline = 100)
+async function renderIndexedComparison() {
+  const el = document.getElementById("chart-index");
   if (!el) return;
   try {
-    const data = await loadCsv("/data/charts/zone_comparison_nontraffic_calls.csv");
+    const [indexed, events] = await Promise.all([
+      loadCsv("/data/charts/corridor_vs_controls_index.csv"),
+      loadCsv("/data/charts/corridor_opening_events.csv"),
+    ]);
     clearLoading(el);
 
-    const zoneLabel = {
-      site_block: "Zone 1 — site block",
-      adjacent_blocks: "Zone 2 — adjacent",
-      wider_nearby: "Zone 3 — wider area",
-    };
-
-    const long = [];
-    for (const row of data) {
-      const sufficient = String(row.post_sufficient).toLowerCase() === "true";
-      long.push({ address: row.address, zone: zoneLabel[row.zone] ?? row.zone, period: "Before", count: row.pre_count });
-      if (sufficient) {
-        long.push({ address: row.address, zone: zoneLabel[row.zone] ?? row.zone, period: "After", count: row.post_count });
-      }
-    }
+    const parsed = indexed.map(d => ({ ...d, date: new Date(d.date) }));
 
     const plot = Plot.plot({
-      marginLeft: 180,
-      marginBottom: 40,
-      x: { label: "Non-traffic calls (12-month period)", grid: true },
-      y: { label: null },
-      fy: { label: null, padding: 0.3 },
-      color: { legend: true, domain: ["Before", "After"], range: ["#9aabbd", "#2a5f9e"] },
+      marginLeft: 55,
+      marginTop: 30,
+      marginBottom: 50,
+      x: { label: null, type: "utc" },
+      y: { label: "Index (baseline = 100)", grid: true },
+      color: { legend: true, label: "Area" },
       marks: [
-        Plot.barX(long, {
-          x: "count",
-          y: "zone",
+        Plot.ruleY([100], { stroke: "#999", strokeDasharray: "2 2" }),
+        Plot.line(parsed, {
+          x: "date",
+          y: "index_value",
+          stroke: "label",
+          strokeWidth: 2,
+          tip: true,
+        }),
+        ...openingMarks(events),
+      ],
+    });
+    el.appendChild(plot);
+  } catch (e) {
+    renderError(el, "Chart data not yet available. Run the analysis pipeline first.");
+    console.warn(e);
+  }
+}
+
+// Chart 3: Active sites vs corridor call volume
+async function renderActiveSites() {
+  const el = document.getElementById("chart-active-sites");
+  if (!el) return;
+  try {
+    const data = await loadCsv("/data/charts/cumulative_openings_effects.csv");
+    clearLoading(el);
+
+    const parsed = data.map(d => ({ ...d, date: new Date(d.date) }));
+
+    // Dual panel: calls on top, active sites on bottom
+    const plot = Plot.plot({
+      marginLeft: 55,
+      marginTop: 10,
+      marginBottom: 50,
+      x: { label: null, type: "utc" },
+      fy: { label: null },
+      marks: [
+        Plot.ruleY([0], { stroke: "#ddd" }),
+        Plot.areaY(parsed, {
+          x: "date",
+          y: "non_traffic_count",
+          fy: () => "Non-traffic calls / month",
+          fill: "#2a5f9e",
+          fillOpacity: 0.15,
+        }),
+        Plot.line(parsed, {
+          x: "date",
+          y: "non_traffic_count",
+          fy: () => "Non-traffic calls / month",
+          stroke: "#2a5f9e",
+          strokeWidth: 1.5,
+          tip: true,
+        }),
+        Plot.step(parsed, {
+          x: "date",
+          y: "active_sites",
+          fy: () => "Active sites",
+          stroke: "#c00",
+          strokeWidth: 2,
+          tip: true,
+        }),
+      ],
+    });
+    el.appendChild(plot);
+  } catch (e) {
+    renderError(el, "Chart data not yet available. Run the analysis pipeline first.");
+    console.warn(e);
+  }
+}
+
+// Chart 4: Immediate property zones — small multiples per site
+async function renderPropertyLocal() {
+  const el = document.getElementById("chart-property-local");
+  if (!el) return;
+  try {
+    const data = await loadCsv("/data/charts/property_immediate_zone_monthly.csv");
+    clearLoading(el);
+
+    const parsed = data.map(d => ({ ...d, date: new Date(d.date) }));
+
+    const plot = Plot.plot({
+      marginLeft: 50,
+      marginTop: 10,
+      marginBottom: 50,
+      x: { label: null, type: "utc" },
+      y: { label: "Calls / month", grid: true },
+      fy: { label: null, padding: 0.25 },
+      marks: [
+        Plot.ruleY([0], { stroke: "#ddd" }),
+        Plot.line(parsed, {
+          x: "date",
+          y: "non_traffic_count",
           fy: "address",
-          fill: "period",
+          stroke: "#2a5f9e",
+          strokeWidth: 1.5,
           tip: true,
         }),
-        Plot.ruleX([0]),
+        // Opening date marker per site
+        ...parsed
+          .filter((d, i, arr) => i === arr.findIndex(r => r.site_id === d.site_id))
+          .map(d => Plot.ruleX([new Date(d.opening_date)], {
+            fy: () => d.address,
+            stroke: "#c00",
+            strokeDasharray: "3 3",
+            strokeOpacity: 0.7,
+          })),
       ],
     });
     el.appendChild(plot);
@@ -114,89 +210,7 @@ async function renderSpillover() {
   }
 }
 
-// Rolling YoY: one line per site with opening-date markers
-async function renderRolling() {
-  const el = document.getElementById("chart-rolling");
-  if (!el) return;
-  try {
-    const data = await loadCsv("/data/charts/rolling_3mo_yoy_nontraffic_calls.csv");
-    clearLoading(el);
-
-    const parsed = data.map(d => ({ ...d, window_start: new Date(d.window_start) }));
-
-    // Collect one opening-date marker per site (first window where is_post_opening flips true)
-    const openings = [];
-    const seen = new Set();
-    for (const d of parsed) {
-      if ((d.is_post_opening === true || d.is_post_opening === "True") && !seen.has(d.site_id)) {
-        openings.push({ site_id: d.site_id, address: d.address, x: d.window_start });
-        seen.add(d.site_id);
-      }
-    }
-
-    const plot = Plot.plot({
-      marginLeft: 60,
-      marginBottom: 50,
-      x: { label: "3-month window start", type: "utc" },
-      y: { label: "YoY % change", tickFormat: d => `${d >= 0 ? "+" : ""}${d}%`, grid: true },
-      color: { legend: true, label: "Site" },
-      marks: [
-        Plot.ruleY([0], { stroke: "#bbb" }),
-        Plot.line(parsed, {
-          x: "window_start",
-          y: "yoy_pct_change",
-          stroke: "address",
-          tip: true,
-        }),
-        Plot.ruleX(openings, {
-          x: "x",
-          stroke: "address",
-          strokeDasharray: "4 3",
-          strokeOpacity: 0.6,
-        }),
-      ],
-    });
-    el.appendChild(plot);
-  } catch (e) {
-    renderError(el, "Chart data not yet available. Run the analysis pipeline first.");
-    console.warn(e);
-  }
-}
-
-// Control corridors line chart
-async function renderControls() {
-  const el = document.getElementById("chart-controls");
-  if (!el) return;
-  try {
-    const data = await loadCsv("/data/charts/corridor_controls.csv");
-    clearLoading(el);
-
-    const parsed = data.map(d => ({ ...d, window_start: new Date(d.window_start) }));
-
-    const plot = Plot.plot({
-      marginLeft: 60,
-      marginBottom: 50,
-      x: { label: "3-month window start", type: "utc" },
-      y: { label: "YoY % change", tickFormat: d => `${d >= 0 ? "+" : ""}${d}%`, grid: true },
-      color: { legend: true, label: "Corridor" },
-      marks: [
-        Plot.ruleY([0], { stroke: "#bbb" }),
-        Plot.line(parsed, {
-          x: "window_start",
-          y: "yoy_pct_change",
-          stroke: "corridor_label",
-          tip: true,
-        }),
-      ],
-    });
-    el.appendChild(plot);
-  } catch (e) {
-    renderError(el, "Chart data not yet available. Run the analysis pipeline first.");
-    console.warn(e);
-  }
-}
-
-renderPrePost();
-renderSpillover();
-renderRolling();
-renderControls();
+renderCorridorTrend();
+renderIndexedComparison();
+renderActiveSites();
+renderPropertyLocal();

@@ -1,76 +1,75 @@
 ---
 layout: base.njk
 title: Findings
-description: Pre/post non-traffic police call results for four Berkeley interim housing sites.
+description: Corridor-level and property-level non-traffic police call results for the University Avenue interim housing cluster.
 ---
 
 # Findings
 
-This page presents the main results of the before-and-after analysis.
+This page presents results of the before-and-after analysis. Because the four study sites are geographically clustered along the same corridor, the primary analysis treats the University Avenue area as a shared treatment environment. Individual opening dates are analyzed as sequential interventions within that shared corridor.
+
 All results use non-traffic calls for service from the Berkeley Police Department's public dataset.
 
 ---
 
-## Pre / Post Comparison
+## 1. Corridor Trend Over Time
 
-For each site, we compared non-traffic call counts in the 12 months before and 12 months after the site's opening date.
+Monthly non-traffic calls within the University Avenue corridor cluster, with each site opening marked.
 
-<div id="chart-prepost" class="chart-container" aria-label="Pre/post non-traffic calls by site">
+<div id="chart-corridor-trend" class="chart-container" aria-label="Corridor monthly non-traffic calls over time">
   <p class="chart-loading">Loading chart…</p>
 </div>
 
 <p class="chart-note">
-  Source: Berkeley Police Department calls for service &middot;
-  <a href="/downloads/site_level_results.csv">Download CSV</a>
+  Vertical markers indicate site opening dates in sequence.
+  Shaded line = 3-month rolling average.
+  <a href="/downloads/site_level_results.csv">Download pre/post data</a>
 </p>
 
 ---
 
-## Zone Spillover
+## 2. Corridor vs. Comparison Corridors
 
-Were changes confined to the site block, or did adjacent blocks also show increases?
+All series indexed to 100 during the baseline period (before the first site opening) so trends are comparable regardless of baseline call volume.
 
-<div id="chart-spillover" class="chart-container" aria-label="Zone spillover by site">
+<div id="chart-index" class="chart-container" aria-label="Indexed comparison: corridor vs controls">
   <p class="chart-loading">Loading chart…</p>
 </div>
 
 <p class="chart-note">
-  Zone 1 = site block (&le;100m) &middot; Zone 2 = adjacent blocks (&le;300m) &middot; Zone 3 = wider nearby area (&le;600m)
+  North Shattuck and South Telegraph are comparison corridors — similar street character, no interim housing conversions in the study period.
+  Divergence from comparison corridors after openings is consistent with a corridor-level effect, but does not prove causation.
 </p>
 
 ---
 
-## Rolling 3-Month Year-over-Year Trend
+## 3. Active Sites and Call Volume
 
-Comparing the same three-month window across consecutive years helps filter out seasonal variation.
+Monthly corridor calls alongside the count of active sites, showing whether call volume changed as successive sites opened.
 
-<div id="chart-rolling" class="chart-container" aria-label="Rolling 3-month year-over-year trend">
+<div id="chart-active-sites" class="chart-container" aria-label="Active sites and corridor call volume">
   <p class="chart-loading">Loading chart…</p>
 </div>
 
-<p class="chart-note">Vertical lines mark site opening dates.</p>
-
 ---
 
-## Control Corridors
+## 4. Immediate Property Areas
 
-For context, we applied the same rolling YoY method to two comparable Berkeley commercial corridors.
+The charts below show monthly non-traffic calls in the immediate block around each property (descriptive only — these small zones overlap within the broader corridor analysis above).
 
-<div id="chart-controls" class="chart-container" aria-label="Control corridor trends">
+<div id="chart-property-local" class="chart-container" aria-label="Immediate site zone monthly calls">
   <p class="chart-loading">Loading chart…</p>
 </div>
 
-<p class="chart-note">
-  North Shattuck and South Telegraph serve as rough baselines for citywide trend patterns.
-</p>
+<p class="chart-note">Immediate zone = {{ params.immediate_zone_m }}m radius per property. These results are secondary and descriptive.</p>
 
 ---
 
-## Interpretation Notes
+## 5. Interpretation Notes
 
-- Changes in call volume after a site opens do not prove the site caused the change.
-- Other factors — citywide trends, economy, staffing, weather, reporting behavior — can affect call counts.
-- When multiple sites show similar increases in adjacent blocks after opening, that pattern is worth public attention.
-- Results are presented to support evidence-based discussion, not to advocate for a particular policy.
+- Because the sites are close together, corridor-level analysis avoids double-counting from overlapping buffers.
+- Changes in call volume after successive openings do not prove the sites caused the change.
+- Comparison with North Shattuck and South Telegraph provides context for citywide trends.
+- When the corridor diverges from comparison areas specifically after site openings, that pattern is worth public attention — but it remains association, not causation.
 
 <script src="/assets/js/charts-findings.js" type="module"></script>
