@@ -76,16 +76,14 @@ We placed a 100 m grid across the entire city (~2,700 points) and counted non-tr
 
 ## Interpretation
 
-All four sites were **above the 82nd percentile citywide before any conversion opened** — these were already above-average activity locations, not quiet blocks that became busy after the projects launched.
+All four sites were **above the 82nd percentile citywide before any conversion opened** — these were not quiet blocks before the projects launched. That said, pre-existing elevation does not diminish what happened after:
 
-After opening, all four sites moved higher in the citywide ranking. The rate increases vary by site:
+- **1461 University**: 11.5 → 18.8 calls/month — a **+64% rate increase**, the largest in absolute terms
+- **1620 San Pablo**: 3.9 → 8.0 calls/month — rate **more than doubled**
+- **1619 University**: 2.5 → 4.8 calls/month — rate **nearly doubled**
+- **1761 University**: 11.3 → 14.0 calls/month — modest increase, but post period is only ~2 months
 
-- **1461 University**: 11.5 → 18.8 calls/month (+64%) — the clearest increase
-- **1620 San Pablo**: 3.9 → 8.0 calls/month (+105%) — rate roughly doubled, though from a lower base
-- **1619 University**: 2.5 → 4.8 calls/month (+92%) — similar pattern
-- **1761 University**: 11.3 → 14.0 calls/month (+24%) — modest increase, but post period is only ~2 months
-
-The pre-existing elevation complicates causal interpretation: some share of post-opening activity likely reflects pre-existing corridor characteristics rather than the conversions themselves. The indexed comparison with control corridors on the [Findings page](/findings/) provides additional context.
+These are substantial increases. The fact that some locations were already elevated before opening is relevant context, but it does not explain away a 64–105% rise in call rates. The [indexed comparison with control corridors](/findings/) examines whether call rates rose citywide during the same period, which is the most direct way to assess how much of this increase is attributable to the sites versus broader trends.
 
 Percentile rankings are descriptive only. Higher call counts may reflect mixed-use corridor activity, transit access, existing disorder patterns, or service clustering — not necessarily resident misconduct.
 
