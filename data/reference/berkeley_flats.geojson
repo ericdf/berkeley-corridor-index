@@ -1,0 +1,28 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "label": "Berkeley Flatlands",
+        "description": "Approximate urbanized flatlands west of the Berkeley Hills. Eastern boundary approximates the 100m elevation contour, running roughly along Claremont Ave / College Ave / Grizzly Peak Blvd. This polygon is used only as a secondary stratified benchmark; it is not an official city boundary."
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[
+          [-122.3271, 37.8459],
+          [-122.2420, 37.8459],
+          [-122.2380, 37.8550],
+          [-122.2360, 37.8640],
+          [-122.2390, 37.8720],
+          [-122.2440, 37.8800],
+          [-122.2490, 37.8860],
+          [-122.2560, 37.8920],
+          [-122.2600, 37.9058],
+          [-122.3271, 37.9058],
+          [-122.3271, 37.8459]
+        ]]
+      }
+    }
+  ]
+}
