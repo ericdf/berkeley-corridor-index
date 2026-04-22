@@ -8,32 +8,17 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-
     steps:
       - uses: actions/checkout@v4
 
-      - name: Set up Python
-        uses: actions/setup-python@v5
-        with:
-          python-version: "3.11"
-          cache: pip
-
-      - name: Install Python dependencies
-        run: pip install -r requirements.txt
-
-      - name: Set up Node
-        uses: actions/setup-node@v4
+      - uses: actions/setup-node@v4
         with:
           node-version: "20"
           cache: npm
 
-      - name: Install Node dependencies
-        run: npm ci
-
-      - name: Run analysis pipeline
-        run: python analysis/run_pipeline.py
-        env:
-          SOCRATA_APP_TOKEN: ${{ secrets.SOCRATA_APP_TOKEN }}
+      - run: npm ci
 
       - name: Build Eleventy site
-        run: npm run build
+        env:
+          ELEVENTY_PREFIX: /berkeley-corridor-index/
+        run: npx eleventy
