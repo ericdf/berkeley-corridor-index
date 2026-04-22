@@ -15,7 +15,7 @@ description: The hidden costs of Berkeley's homelessness strategy — fiscal, ne
 
 <div class="hidden-costs">
 
-  <a class="cost-statement" href="/findings/">
+  <a class="cost-statement" href="{{ '/findings/' | url }}">
     <div class="cost-number">+164%</div>
     <div class="cost-body">
       <div class="cost-headline">Police calls and stops surged near converted sites — while the rest of Berkeley improved.</div>
@@ -24,7 +24,7 @@ description: The hidden costs of Berkeley's homelessness strategy — fiscal, ne
     <div class="cost-link">View findings →</div>
   </a>
 
-  <a class="cost-statement" href="/findings/#finding-6-the-full-fiscal-cost-has-not-been-tallied">
+  <a class="cost-statement" href="{{ '/findings/' | url }}#finding-6-the-full-fiscal-cost-has-not-been-tallied">
     <div class="cost-number">$5.2M</div>
     <div class="cost-body">
       <div class="cost-headline">One 23-room motel lease costs $5.18 million over five years — before service contracts.</div>
@@ -33,7 +33,7 @@ description: The hidden costs of Berkeley's homelessness strategy — fiscal, ne
     <div class="cost-link">View fiscal analysis →</div>
   </a>
 
-  <a class="cost-statement" href="/context/#the-financial-stack">
+  <a class="cost-statement" href="{{ '/context/' | url }}#the-financial-stack">
     <div class="cost-number">$1M+</div>
     <div class="cost-body">
       <div class="cost-headline">The total public investment per person in Berkeley's flagship homeless housing program exceeds $1 million over a decade.</div>
@@ -42,7 +42,7 @@ description: The hidden costs of Berkeley's homelessness strategy — fiscal, ne
     <div class="cost-link">Read the context →</div>
   </a>
 
-  <a class="cost-statement" href="/context/#measure-p-and-the-diversion-of-fiscal-capacity">
+  <a class="cost-statement" href="{{ '/context/' | url }}#measure-p-and-the-diversion-of-fiscal-capacity">
     <div class="cost-number">$0</div>
     <div class="cost-body">
       <div class="cost-headline">Every converted motel room is hotel tax revenue Berkeley will never collect again.</div>
@@ -51,7 +51,7 @@ description: The hidden costs of Berkeley's homelessness strategy — fiscal, ne
     <div class="cost-link">Read the context →</div>
   </a>
 
-  <a class="cost-statement" href="/context/#the-pilot-to-permanent-pipeline-stair-as-prototype">
+  <a class="cost-statement" href="{{ '/context/' | url }}#the-pilot-to-permanent-pipeline-stair-as-prototype">
     <div class="cost-number">0</div>
     <div class="cost-body">
       <div class="cost-headline">No program in this system has ever had defined failure criteria.</div>
@@ -60,7 +60,7 @@ description: The hidden costs of Berkeley's homelessness strategy — fiscal, ne
     <div class="cost-link">Read the context →</div>
   </a>
 
-  <a class="cost-statement" href="/context/#the-magnet-effect-and-regional-migration">
+  <a class="cost-statement" href="{{ '/context/' | url }}#the-magnet-effect-and-regional-migration">
     <div class="cost-number">↑</div>
     <div class="cost-body">
       <div class="cost-headline">Berkeley's premium, no-barrier services made it a regional destination — and the city knew it.</div>
@@ -69,7 +69,7 @@ description: The hidden costs of Berkeley's homelessness strategy — fiscal, ne
     <div class="cost-link">Read the context →</div>
   </a>
 
-  <a class="cost-statement" href="/context/#a-case-study-in-political-incentives-jesse-arreguin">
+  <a class="cost-statement" href="{{ '/context/' | url }}#a-case-study-in-political-incentives-jesse-arreguin">
     <div class="cost-number">16yr+</div>
     <div class="cost-body">
       <div class="cost-headline">The officials who built this system had structural reasons not to question it.</div>
@@ -96,7 +96,7 @@ description: The hidden costs of Berkeley's homelessness strategy — fiscal, ne
       <div class="stat-label">Pedestrian stops near the Golden Bear Inn on San Pablo after opening</div>
     </div>
   </div>
-  <p class="stat-note"><a href="/findings/">View full findings →</a></p>
+  <p class="stat-note"><a href="{{ '/findings/' | url }}">View full findings →</a></p>
 </section>
 
 <section class="about-data">
@@ -119,7 +119,7 @@ description: The hidden costs of Berkeley's homelessness strategy — fiscal, ne
     variation in degree, not kind.
   </p>
   <p>
-    <a href="/methodology/">Full methodology</a> &middot;
-    <a href="/data-sources/">Download the data</a>
+    <a href="{{ '/methodology/' | url }}">Full methodology</a> &middot;
+    <a href="{{ '/data-sources/' | url }}">Download the data</a>
   </p>
 </section>

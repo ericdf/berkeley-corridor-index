@@ -2,6 +2,8 @@
 layout: base.njk
 title: Citywide Benchmark
 description: How do non-traffic call counts near the studied sites compare to the rest of Berkeley, before and after opening?
+scripts:
+  - /assets/js/charts-benchmark.js
 ---
 
 # Citywide Benchmark
@@ -108,4 +110,3 @@ Percentile rankings are descriptive only. Higher call counts may reflect mixed-u
 
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
-<script src="/assets/js/charts-benchmark.js" type="module"></script>

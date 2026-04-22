@@ -2,6 +2,8 @@
 layout: base.njk
 title: Maps
 description: Maps of the University Avenue core cluster, San Pablo node, site locations, zones, and comparison corridors.
+scripts:
+  - /assets/js/map.js
 ---
 
 # Maps
@@ -34,4 +36,3 @@ Zone polygons around each site are shown for reference only — the primary anal
 
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
-<script src="/assets/js/map.js" type="module"></script>

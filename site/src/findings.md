@@ -2,6 +2,9 @@
 layout: base.njk
 title: Findings
 description: Concentration, site-level pre/post, and cluster trend results for the Berkeley interim housing study.
+scripts:
+  - /assets/js/charts-findings.js
+  - /assets/js/charts-findings-new.js
 ---
 
 # Findings
@@ -57,7 +60,7 @@ Non-traffic police calls are concentrated within 100 m of the studied properties
 <p class="chart-note">
   Share of non-traffic calls within the combined study area (university cluster + San Pablo node) that fall within each site's 100 m zone,
   split by pre- and post-opening periods.
-  <a href="/data-sources/">Download data</a>
+  <a href="{{ '/data-sources/' | url }}">Download data</a>
 </p>
 
 ---
@@ -72,7 +75,7 @@ Monthly non-traffic calls in the 600 m zone around each site, 12 months before a
 
 <p class="chart-note">
   1761 University has less than 6 months of post-opening data and is not shown as a definitive result.
-  <a href="/downloads/site_level_results.csv">Download pre/post data</a>
+  <a href="{{ '/downloads/' | url }}site_level_results.csv">Download pre/post data</a>
 </p>
 
 ---
@@ -210,5 +213,3 @@ Two corridors — South Telegraph and Shattuck south of University — have indi
 - **Association, not causation**: Changes in call volume after openings do not prove the sites caused the change. Comparison with control corridors provides context for broader citywide trends.
 - **Data limitations**: Calls data required geocoding from block addresses; approximately 15% of records could not be geocoded. Opening dates are approximate for some sites.
 
-<script src="/assets/js/charts-findings.js" type="module"></script>
-<script src="/assets/js/charts-findings-new.js" type="module"></script>
