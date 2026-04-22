@@ -2,9 +2,7 @@
 
 Berkeley public safety data analysis — non-partisan, open source.
 
-**Live site:** https://ericfriedman.github.io/berkeley-corridor-index/
-
-*(Replace `ericfriedman` with your GitHub username if different.)*
+**Live site:** https://ericdf.github.io/berkeley-corridor-index/
 
 ---
 
