@@ -19,7 +19,7 @@ sites:
     opening_date: "2023-07-31"
     program_type: "Reentry / supportive housing"
     geography_group: university_core
-    notes: ""
+    notes: "23-room Super 8 / The Campus, operated by Insight Housing. Originally intended for residents of a specific recalcitrant encampment; that population declined placement and the city pivoted to a different group. Slow occupancy ramp: ~14 of 23 rooms occupied as of February 2024 with 4 more scheduled. Full occupancy date unknown. Post-opening call data reflects partial occupancy and likely understates steady-state impact."
 
   - id: site_1761
     address: "1761 University Ave"

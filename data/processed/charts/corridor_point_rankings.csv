@@ -1,0 +1,29 @@
+site_id,label,corridor,n_corridor_pts,site_count_all,site_count_pre,percentile_all,percentile_pre,corridor_median,corridor_p90,corridor_max
+site_1461,1461 University,South Telegraph,28,1149,68,92.9,71.4,327.5,1110.8,2277.0
+site_1619,1619 University,South Telegraph,28,293,15,46.4,25.0,327.5,1110.8,2277.0
+site_1761,1761 University,South Telegraph,28,873,67,78.6,71.4,327.5,1110.8,2277.0
+site_golden_bear,Golden Bear Inn,South Telegraph,28,481,23,60.7,42.9,327.5,1110.8,2277.0
+site_1461,1461 University,Shattuck (south),24,1149,68,95.8,75.0,334.0,921.0,1271.0
+site_1619,1619 University,Shattuck (south),24,293,15,45.8,25.0,334.0,921.0,1271.0
+site_1761,1761 University,Shattuck (south),24,873,67,87.5,75.0,334.0,921.0,1271.0
+site_golden_bear,Golden Bear Inn,Shattuck (south),24,481,23,79.2,41.7,334.0,921.0,1271.0
+site_1461,1461 University,Adeline (south),26,1149,68,100.0,100.0,120.5,386.5,452.0
+site_1619,1619 University,Adeline (south),26,293,15,73.1,65.4,120.5,386.5,452.0
+site_1761,1761 University,Adeline (south),26,873,67,100.0,100.0,120.5,386.5,452.0
+site_golden_bear,Golden Bear Inn,Adeline (south),26,481,23,100.0,73.1,120.5,386.5,452.0
+site_1461,1461 University,Ashby Avenue,53,1149,68,94.3,94.3,70.0,216.6,1278.0
+site_1619,1619 University,Ashby Avenue,53,293,15,92.5,83.0,70.0,216.6,1278.0
+site_1761,1761 University,Ashby Avenue,53,873,67,94.3,94.3,70.0,216.6,1278.0
+site_golden_bear,Golden Bear Inn,Ashby Avenue,53,481,23,94.3,92.5,70.0,216.6,1278.0
+site_1461,1461 University,College Ave (Elmwood),25,1149,68,100.0,92.0,151.0,441.0,843.0
+site_1619,1619 University,College Ave (Elmwood),25,293,15,64.0,52.0,151.0,441.0,843.0
+site_1761,1761 University,College Ave (Elmwood),25,873,67,100.0,92.0,151.0,441.0,843.0
+site_golden_bear,Golden Bear Inn,College Ave (Elmwood),25,481,23,92.0,52.0,151.0,441.0,843.0
+site_1461,1461 University,Fourth Street,33,1149,68,100.0,100.0,64.0,392.4,592.0
+site_1619,1619 University,Fourth Street,33,293,15,78.8,69.7,64.0,392.4,592.0
+site_1761,1761 University,Fourth Street,33,873,67,100.0,100.0,64.0,392.4,592.0
+site_golden_bear,Golden Bear Inn,Fourth Street,33,481,23,97.0,78.8,64.0,392.4,592.0
+site_1461,1461 University,Solano Avenue,15,1149,68,100.0,100.0,28.0,405.2,453.0
+site_1619,1619 University,Solano Avenue,15,293,15,80.0,80.0,28.0,405.2,453.0
+site_1761,1761 University,Solano Avenue,15,873,67,100.0,100.0,28.0,405.2,453.0
+site_golden_bear,Golden Bear Inn,Solano Avenue,15,481,23,100.0,80.0,28.0,405.2,453.0

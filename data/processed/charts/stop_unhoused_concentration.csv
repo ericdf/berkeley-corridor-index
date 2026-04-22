@@ -1,0 +1,5 @@
+site_id,label,address,ped_stops_total,perceived_unhoused_n,pct_unhoused,citywide_pct_unhoused,ratio_vs_citywide
+site_1461,1461 University,1461 University Ave,66,23,34.8,58.1,0.6
+site_1619,1619 University,1619 University Ave,12,9,75.0,58.1,1.29
+site_1761,1761 University,1761 University Ave,15,9,60.0,58.1,1.03
+site_golden_bear,Golden Bear Inn,1620 San Pablo Ave,46,24,52.2,58.1,0.9

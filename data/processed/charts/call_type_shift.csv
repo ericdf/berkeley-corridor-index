@@ -1,0 +1,70 @@
+site_id,label,address,opening_date,category,pre_count,post_count,pre_months,post_months,pre_rate,post_rate,rate_change,rate_change_pct,has_pre_post
+site_1461,1461 University,1461 University Ave,2021-07-01,assault,0.0,1.0,5.9,57.5,0.0,0.017,0.017,,True
+site_1461,1461 University,1461 University Ave,2021-07-01,battery,3.0,46.0,5.9,57.5,0.507,0.8,0.293,57.8,True
+site_1461,1461 University,1461 University Ave,2021-07-01,disturbance,22.0,249.0,5.9,57.5,3.72,4.331,0.611,16.4,True
+site_1461,1461 University,1461 University Ave,2021-07-01,family disturbance,1.0,11.0,5.9,57.5,0.169,0.191,0.022,13.0,True
+site_1461,1461 University,1461 University Ave,2021-07-01,mental health,1.0,14.0,5.9,57.5,0.169,0.244,0.075,44.4,True
+site_1461,1461 University,1461 University Ave,2021-07-01,noise,2.0,29.0,5.9,57.5,0.338,0.504,0.166,49.1,True
+site_1461,1461 University,1461 University Ave,2021-07-01,person down,1.0,7.0,5.9,57.5,0.169,0.122,-0.047,-27.8,True
+site_1461,1461 University,1461 University Ave,2021-07-01,robbery,0.0,12.0,5.9,57.5,0.0,0.209,0.209,,True
+site_1461,1461 University,1461 University Ave,2021-07-01,theft,27.0,528.0,5.9,57.5,4.566,9.184,4.618,101.1,True
+site_1461,1461 University,1461 University Ave,2021-07-01,trespassing,6.0,80.0,5.9,57.5,1.015,1.392,0.377,37.1,True
+site_1461,1461 University,1461 University Ave,2021-07-01,vandalism,0.0,11.0,5.9,57.5,0.0,0.191,0.191,,True
+site_1461,1461 University,1461 University Ave,2021-07-01,welfare check,5.0,93.0,5.9,57.5,0.846,1.618,0.772,91.3,True
+site_1619,1619 University,1619 University Ave,2023-07-31,battery,3.0,8.0,12.0,32.5,0.25,0.246,-0.004,-1.6,True
+site_1619,1619 University,1619 University Ave,2023-07-31,disturbance,21.0,54.0,12.0,32.5,1.751,1.66,-0.091,-5.2,True
+site_1619,1619 University,1619 University Ave,2023-07-31,family disturbance,2.0,6.0,12.0,32.5,0.167,0.184,0.017,10.2,True
+site_1619,1619 University,1619 University Ave,2023-07-31,mental health,0.0,8.0,12.0,32.5,0.0,0.246,0.246,,True
+site_1619,1619 University,1619 University Ave,2023-07-31,noise,1.0,11.0,12.0,32.5,0.083,0.338,0.255,307.2,True
+site_1619,1619 University,1619 University Ave,2023-07-31,person down,0.0,1.0,12.0,32.5,0.0,0.031,0.031,,True
+site_1619,1619 University,1619 University Ave,2023-07-31,robbery,0.0,2.0,12.0,32.5,0.0,0.061,0.061,,True
+site_1619,1619 University,1619 University Ave,2023-07-31,theft,6.0,27.0,12.0,32.5,0.5,0.83,0.33,66.0,True
+site_1619,1619 University,1619 University Ave,2023-07-31,trespassing,5.0,26.0,12.0,32.5,0.417,0.799,0.382,91.6,True
+site_1619,1619 University,1619 University Ave,2023-07-31,vandalism,2.0,5.0,12.0,32.5,0.167,0.154,-0.013,-7.8,True
+site_1619,1619 University,1619 University Ave,2023-07-31,welfare check,5.0,37.0,12.0,32.5,0.417,1.138,0.721,172.9,True
+site_1761,1761 University,1761 University Ave,2026-02-01,battery,4.0,2.0,12.0,2.4,0.334,0.823,0.489,146.4,True
+site_1761,1761 University,1761 University Ave,2026-02-01,disturbance,85.0,10.0,12.0,2.4,7.089,4.114,-2.975,-42.0,True
+site_1761,1761 University,1761 University Ave,2026-02-01,family disturbance,2.0,0.0,12.0,2.4,0.167,0.0,-0.167,-100.0,True
+site_1761,1761 University,1761 University Ave,2026-02-01,mental health,5.0,0.0,12.0,2.4,0.417,0.0,-0.417,-100.0,True
+site_1761,1761 University,1761 University Ave,2026-02-01,noise,3.0,1.0,12.0,2.4,0.25,0.411,0.161,64.4,True
+site_1761,1761 University,1761 University Ave,2026-02-01,person down,1.0,1.0,12.0,2.4,0.083,0.411,0.328,395.2,True
+site_1761,1761 University,1761 University Ave,2026-02-01,robbery,3.0,0.0,12.0,2.4,0.25,0.0,-0.25,-100.0,True
+site_1761,1761 University,1761 University Ave,2026-02-01,theft,19.0,5.0,12.0,2.4,1.585,2.057,0.472,29.8,True
+site_1761,1761 University,1761 University Ave,2026-02-01,trespassing,22.0,4.0,12.0,2.4,1.835,1.645,-0.19,-10.4,True
+site_1761,1761 University,1761 University Ave,2026-02-01,vandalism,4.0,0.0,12.0,2.4,0.334,0.0,-0.334,-100.0,True
+site_1761,1761 University,1761 University Ave,2026-02-01,welfare check,18.0,3.0,12.0,2.4,1.501,1.234,-0.267,-17.8,True
+site_golden_bear,Golden Bear Inn,1620 San Pablo Ave,2023-01-01,assault,0.0,2.0,12.0,39.5,0.0,0.051,0.051,,True
+site_golden_bear,Golden Bear Inn,1620 San Pablo Ave,2023-01-01,battery,4.0,28.0,12.0,39.5,0.334,0.71,0.376,112.6,True
+site_golden_bear,Golden Bear Inn,1620 San Pablo Ave,2023-01-01,disturbance,12.0,160.0,12.0,39.5,1.001,4.055,3.054,305.1,True
+site_golden_bear,Golden Bear Inn,1620 San Pablo Ave,2023-01-01,family disturbance,2.0,18.0,12.0,39.5,0.167,0.456,0.289,173.1,True
+site_golden_bear,Golden Bear Inn,1620 San Pablo Ave,2023-01-01,mental health,1.0,30.0,12.0,39.5,0.083,0.76,0.677,815.7,True
+site_golden_bear,Golden Bear Inn,1620 San Pablo Ave,2023-01-01,noise,3.0,44.0,12.0,39.5,0.25,1.115,0.865,346.0,True
+site_golden_bear,Golden Bear Inn,1620 San Pablo Ave,2023-01-01,person down,0.0,2.0,12.0,39.5,0.0,0.051,0.051,,True
+site_golden_bear,Golden Bear Inn,1620 San Pablo Ave,2023-01-01,theft,6.0,47.0,12.0,39.5,0.5,1.191,0.691,138.2,True
+site_golden_bear,Golden Bear Inn,1620 San Pablo Ave,2023-01-01,trespassing,3.0,15.0,12.0,39.5,0.25,0.38,0.13,52.0,True
+site_golden_bear,Golden Bear Inn,1620 San Pablo Ave,2023-01-01,vandalism,0.0,11.0,12.0,39.5,0.0,0.279,0.279,,True
+site_golden_bear,Golden Bear Inn,1620 San Pablo Ave,2023-01-01,welfare check,2.0,53.0,12.0,39.5,0.167,1.343,1.176,704.2,True
+hope_center_berkeley_way,Hope Center (Berkeley Way),2012 Berkeley Way,2022-09-01,assault,0.0,3.0,12.0,43.5,0.0,0.069,0.069,,True
+hope_center_berkeley_way,Hope Center (Berkeley Way),2012 Berkeley Way,2022-09-01,battery,8.0,38.0,12.0,43.5,0.667,0.874,0.207,31.0,True
+hope_center_berkeley_way,Hope Center (Berkeley Way),2012 Berkeley Way,2022-09-01,disturbance,62.0,338.0,12.0,43.5,5.171,7.777,2.606,50.4,True
+hope_center_berkeley_way,Hope Center (Berkeley Way),2012 Berkeley Way,2022-09-01,family disturbance,1.0,5.0,12.0,43.5,0.083,0.115,0.032,38.6,True
+hope_center_berkeley_way,Hope Center (Berkeley Way),2012 Berkeley Way,2022-09-01,mental health,6.0,25.0,12.0,43.5,0.5,0.575,0.075,15.0,True
+hope_center_berkeley_way,Hope Center (Berkeley Way),2012 Berkeley Way,2022-09-01,noise,4.0,12.0,12.0,43.5,0.334,0.276,-0.058,-17.4,True
+hope_center_berkeley_way,Hope Center (Berkeley Way),2012 Berkeley Way,2022-09-01,person down,1.0,3.0,12.0,43.5,0.083,0.069,-0.014,-16.9,True
+hope_center_berkeley_way,Hope Center (Berkeley Way),2012 Berkeley Way,2022-09-01,robbery,2.0,9.0,12.0,43.5,0.167,0.207,0.04,24.0,True
+hope_center_berkeley_way,Hope Center (Berkeley Way),2012 Berkeley Way,2022-09-01,theft,37.0,111.0,12.0,43.5,3.086,2.554,-0.532,-17.2,True
+hope_center_berkeley_way,Hope Center (Berkeley Way),2012 Berkeley Way,2022-09-01,trespassing,13.0,89.0,12.0,43.5,1.084,2.048,0.964,88.9,True
+hope_center_berkeley_way,Hope Center (Berkeley Way),2012 Berkeley Way,2022-09-01,vandalism,2.0,13.0,12.0,43.5,0.167,0.299,0.132,79.0,True
+hope_center_berkeley_way,Hope Center (Berkeley Way),2012 Berkeley Way,2022-09-01,welfare check,15.0,80.0,12.0,43.5,1.251,1.841,0.59,47.2,True
+capri_1512,1512 University Ave,1512 University Ave,,assault,,,,,,0.016,,,False
+capri_1512,1512 University Ave,1512 University Ave,,battery,,,,,,0.473,,,False
+capri_1512,1512 University Ave,1512 University Ave,,disturbance,,,,,,2.175,,,False
+capri_1512,1512 University Ave,1512 University Ave,,family disturbance,,,,,,0.221,,,False
+capri_1512,1512 University Ave,1512 University Ave,,mental health,,,,,,0.284,,,False
+capri_1512,1512 University Ave,1512 University Ave,,noise,,,,,,0.126,,,False
+capri_1512,1512 University Ave,1512 University Ave,,person down,,,,,,0.142,,,False
+capri_1512,1512 University Ave,1512 University Ave,,robbery,,,,,,0.189,,,False
+capri_1512,1512 University Ave,1512 University Ave,,theft,,,,,,0.741,,,False
+capri_1512,1512 University Ave,1512 University Ave,,trespassing,,,,,,0.631,,,False
+capri_1512,1512 University Ave,1512 University Ave,,vandalism,,,,,,0.173,,,False
+capri_1512,1512 University Ave,1512 University Ave,,welfare check,,,,,,1.466,,,False

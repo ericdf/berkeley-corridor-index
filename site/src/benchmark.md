@@ -50,8 +50,9 @@ We placed a 100 m grid across the entire city (~2,700 points) and counted non-tr
 </div>
 
 <p class="chart-note">
-  Histogram of all-period non-traffic call counts at ~2,700 grid points across Berkeley.
-  Vertical markers show each site's all-period count. Most of Berkeley is far below these levels.
+  Each bar shows how many of the ~2,700 Berkeley grid points recorded that call-count range over the full study period.
+  The tall bars on the left represent the large number of quiet locations across the city.
+  The vertical markers show where each study site falls in that distribution — the further right the marker, the more activity at that location relative to the rest of Berkeley.
 </p>
 
 ---
@@ -83,7 +84,7 @@ We placed a 100 m grid across the entire city (~2,700 points) and counted non-tr
 
 The citywide percentiles (91st–99th) include quiet residential streets, parks, and hillside neighborhoods — not a fair comparison for sites on University and San Pablo Avenues. The corridor-only universe (367 grid points on or near primary and secondary roads) is the more appropriate baseline.
 
-Against that benchmark, the picture is more mixed:
+Even against that more demanding baseline, the study sites stand out — and their activity increased substantially after the shelters opened:
 
 | Site | Pre (corridor pct) | Post (corridor pct) | Rate change |
 |------|--------------------|---------------------|-------------|
@@ -92,7 +93,7 @@ Against that benchmark, the picture is more mixed:
 | 1620 San Pablo | 67th | 82nd | +105% |
 | 1619 University | 55th | 68th | +92% |
 
-Two sites (1461 and 1761 University) were already in the top decile of major-corridor locations before opening. Two others (San Pablo, 1619 University) were elevated but not exceptional — and moved up substantially after opening.
+Every site was already above the median for major commercial corridors before opening. Every site moved higher after opening. Two (1461 and 1761 University) were already in the top decile of active corridors before the conversion — and climbed further. The other two more than doubled their call rates.
 
 The rate increases are notable regardless of the comparison universe:
 

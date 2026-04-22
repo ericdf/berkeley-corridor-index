@@ -1,7 +1,8 @@
 // Site profile page — small Leaflet map + Observable Plot charts
 
+const _BASE = (window.BASE_PATH || "/").replace(/\/$/, "");
 async function loadCsv(path) {
-  const res = await fetch(path);
+  const res = await fetch(_BASE + path);
   if (!res.ok) throw new Error(`Failed to load ${path}`);
   const text = await res.text();
   return d3.csvParse(text, d3.autoType);

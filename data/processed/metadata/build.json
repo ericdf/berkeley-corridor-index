@@ -1,0 +1,13 @@
+{
+  "build_timestamp": "2026-04-19T17:04:03.279018+00:00",
+  "git_sha": "77937af",
+  "data_refresh_date": "2026-04-19T09:33:35.054356+00:00",
+  "study_period_months": 12,
+  "sites": [
+    "site_1461",
+    "site_1619",
+    "site_1761",
+    "site_golden_bear"
+  ],
+  "source_notes": "Berkeley open data portal; see data_sources.yml"
+}

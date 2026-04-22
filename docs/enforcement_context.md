@@ -1,0 +1,9 @@
+# Methodological Note: Reporting and Enforcement Context
+
+This study covers 2021–2026, a period during which Berkeley experienced documented reductions in both citizen reporting and proactive policing. Following the murder of George Floyd in May 2020, Berkeley's city government pursued an aggressive agenda to reduce police department staffing and scope. Sworn officer headcount declined substantially over the study period. Calling the police on unhoused individuals became socially stigmatized in Berkeley's public discourse, and residents were actively discouraged from doing so by community organizations and elected officials.
+
+These factors create a systematic downward bias in both the calls-for-service and stop data used in this analysis. Citizen calls undercount actual incidents because a meaningful share of residents chose not to call. Officer-initiated stops undercount actual enforcement contacts because officers facing heightened scrutiny reduced proactive engagement.
+
+**The consequence for interpretation is directional and consistent: the increases documented near shelter sites are conservative estimates of the true neighborhood impact.** The observed changes occurred against a measurable headwind of reduced reporting and enforcement. That the signal is detectable at all — and that it diverges so clearly from comparison corridors where conditions improved over the same period — suggests the underlying change in neighborhood conditions was substantial enough to overcome the reluctance to report.
+
+Analysts who wish to challenge these findings on underenforcement grounds face a symmetric problem: if reduced enforcement suppressed the data near shelter sites, it suppressed the data on comparison corridors equally. The divergence between corridors remains, and grows more difficult to explain absent the shelter siting decisions.

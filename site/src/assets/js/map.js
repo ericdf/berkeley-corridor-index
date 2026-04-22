@@ -3,8 +3,9 @@
 const BERKELEY_CENTER = [37.8716, -122.2827];
 const ZOOM = 13;
 
+const _BASE = (window.BASE_PATH || "/").replace(/\/$/, "");
 async function loadGeoJson(path) {
-  const res = await fetch(path);
+  const res = await fetch(_BASE + path);
   if (!res.ok) throw new Error(`Failed to load ${path}`);
   return res.json();
 }

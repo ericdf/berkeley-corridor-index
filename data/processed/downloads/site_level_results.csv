@@ -1,0 +1,5 @@
+site_id,address,opening_date,pre_start,pre_end,post_start,post_end,pre_count,post_count,pct_change,post_sufficient,post_coverage_pct
+site_1461,1461 University Ave,2021-07-01,2020-07-01,2021-07-01,2021-07-01,2022-07-01,642,1119.0,74.3,true,100.0
+site_1619,1619 University Ave,2023-07-31,2022-07-31,2023-07-31,2023-07-31,2024-07-31,1846,1723.0,-6.7,true,100.0
+site_1761,1761 University Ave,2026-02-01,2025-02-01,2026-02-01,2026-02-01,2027-02-01,2234,,,false,20.3
+site_golden_bear,1620 San Pablo Ave,2023-01-01,2022-01-01,2023-01-01,2023-01-01,2024-01-01,685,640.0,-6.6,true,100.0

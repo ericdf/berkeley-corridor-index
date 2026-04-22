@@ -1,0 +1,6 @@
+parameter,value
+pre_post_window_months,12
+site_block_radius_m,100
+adjacent_blocks_radius_m,300
+wider_nearby_radius_m,600
+rolling_yoy_window_months,3

@@ -1,7 +1,8 @@
 // Homepage hero chart — share of study-area calls within each site's 100m zone
 
+const _BASE = (window.BASE_PATH || "/").replace(/\/$/, "");
 async function loadCsv(path) {
-  const res = await fetch(path);
+  const res = await fetch(_BASE + path);
   if (!res.ok) return null;
   return d3.csvParse(await res.text(), d3.autoType);
 }

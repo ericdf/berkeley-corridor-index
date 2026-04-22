@@ -1,0 +1,193 @@
+corridor_id,corridor,year,month,count,avg_monthly_2021,avg_monthly_2025,trajectory_index,annual_calls_2021,is_clean_retail
+fourth_street_north,Fourth Street (retail district),2021,1,16,20.5,22.4,109.3,246,True
+fourth_street_north,Fourth Street (retail district),2021,2,22,20.5,22.4,109.3,246,True
+fourth_street_north,Fourth Street (retail district),2021,3,13,20.5,22.4,109.3,246,True
+fourth_street_north,Fourth Street (retail district),2021,4,16,20.5,22.4,109.3,246,True
+fourth_street_north,Fourth Street (retail district),2021,5,34,20.5,22.4,109.3,246,True
+fourth_street_north,Fourth Street (retail district),2021,6,13,20.5,22.4,109.3,246,True
+fourth_street_north,Fourth Street (retail district),2021,7,19,20.5,22.4,109.3,246,True
+fourth_street_north,Fourth Street (retail district),2021,8,20,20.5,22.4,109.3,246,True
+fourth_street_north,Fourth Street (retail district),2021,9,19,20.5,22.4,109.3,246,True
+fourth_street_north,Fourth Street (retail district),2021,10,22,20.5,22.4,109.3,246,True
+fourth_street_north,Fourth Street (retail district),2021,11,31,20.5,22.4,109.3,246,True
+fourth_street_north,Fourth Street (retail district),2021,12,21,20.5,22.4,109.3,246,True
+fourth_street_north,Fourth Street (retail district),2022,1,26,20.5,22.4,109.3,246,True
+fourth_street_north,Fourth Street (retail district),2022,2,15,20.5,22.4,109.3,246,True
+fourth_street_north,Fourth Street (retail district),2022,3,18,20.5,22.4,109.3,246,True
+fourth_street_north,Fourth Street (retail district),2022,4,22,20.5,22.4,109.3,246,True
+fourth_street_north,Fourth Street (retail district),2022,5,18,20.5,22.4,109.3,246,True
+fourth_street_north,Fourth Street (retail district),2022,6,21,20.5,22.4,109.3,246,True
+fourth_street_north,Fourth Street (retail district),2022,7,29,20.5,22.4,109.3,246,True
+fourth_street_north,Fourth Street (retail district),2022,8,29,20.5,22.4,109.3,246,True
+fourth_street_north,Fourth Street (retail district),2022,9,32,20.5,22.4,109.3,246,True
+fourth_street_north,Fourth Street (retail district),2022,10,31,20.5,22.4,109.3,246,True
+fourth_street_north,Fourth Street (retail district),2022,11,22,20.5,22.4,109.3,246,True
+fourth_street_north,Fourth Street (retail district),2022,12,24,20.5,22.4,109.3,246,True
+fourth_street_north,Fourth Street (retail district),2023,1,22,20.5,22.4,109.3,246,True
+fourth_street_north,Fourth Street (retail district),2023,2,26,20.5,22.4,109.3,246,True
+fourth_street_north,Fourth Street (retail district),2023,3,20,20.5,22.4,109.3,246,True
+fourth_street_north,Fourth Street (retail district),2023,4,29,20.5,22.4,109.3,246,True
+fourth_street_north,Fourth Street (retail district),2023,5,34,20.5,22.4,109.3,246,True
+fourth_street_north,Fourth Street (retail district),2023,6,20,20.5,22.4,109.3,246,True
+fourth_street_north,Fourth Street (retail district),2023,7,21,20.5,22.4,109.3,246,True
+fourth_street_north,Fourth Street (retail district),2023,8,28,20.5,22.4,109.3,246,True
+fourth_street_north,Fourth Street (retail district),2023,9,16,20.5,22.4,109.3,246,True
+fourth_street_north,Fourth Street (retail district),2023,10,25,20.5,22.4,109.3,246,True
+fourth_street_north,Fourth Street (retail district),2023,11,24,20.5,22.4,109.3,246,True
+fourth_street_north,Fourth Street (retail district),2023,12,29,20.5,22.4,109.3,246,True
+fourth_street_north,Fourth Street (retail district),2024,1,23,20.5,22.4,109.3,246,True
+fourth_street_north,Fourth Street (retail district),2024,2,14,20.5,22.4,109.3,246,True
+fourth_street_north,Fourth Street (retail district),2024,3,24,20.5,22.4,109.3,246,True
+fourth_street_north,Fourth Street (retail district),2024,4,17,20.5,22.4,109.3,246,True
+fourth_street_north,Fourth Street (retail district),2024,5,10,20.5,22.4,109.3,246,True
+fourth_street_north,Fourth Street (retail district),2024,6,12,20.5,22.4,109.3,246,True
+fourth_street_north,Fourth Street (retail district),2024,7,18,20.5,22.4,109.3,246,True
+fourth_street_north,Fourth Street (retail district),2024,8,28,20.5,22.4,109.3,246,True
+fourth_street_north,Fourth Street (retail district),2024,9,28,20.5,22.4,109.3,246,True
+fourth_street_north,Fourth Street (retail district),2024,10,27,20.5,22.4,109.3,246,True
+fourth_street_north,Fourth Street (retail district),2024,11,15,20.5,22.4,109.3,246,True
+fourth_street_north,Fourth Street (retail district),2024,12,24,20.5,22.4,109.3,246,True
+fourth_street_north,Fourth Street (retail district),2025,1,21,20.5,22.4,109.3,246,True
+fourth_street_north,Fourth Street (retail district),2025,2,18,20.5,22.4,109.3,246,True
+fourth_street_north,Fourth Street (retail district),2025,3,17,20.5,22.4,109.3,246,True
+fourth_street_north,Fourth Street (retail district),2025,4,16,20.5,22.4,109.3,246,True
+fourth_street_north,Fourth Street (retail district),2025,5,21,20.5,22.4,109.3,246,True
+fourth_street_north,Fourth Street (retail district),2025,6,15,20.5,22.4,109.3,246,True
+fourth_street_north,Fourth Street (retail district),2025,7,34,20.5,22.4,109.3,246,True
+fourth_street_north,Fourth Street (retail district),2025,8,20,20.5,22.4,109.3,246,True
+fourth_street_north,Fourth Street (retail district),2025,9,21,20.5,22.4,109.3,246,True
+fourth_street_north,Fourth Street (retail district),2025,10,40,20.5,22.4,109.3,246,True
+fourth_street_north,Fourth Street (retail district),2025,11,30,20.5,22.4,109.3,246,True
+fourth_street_north,Fourth Street (retail district),2025,12,16,20.5,22.4,109.3,246,True
+fourth_street_north,Fourth Street (retail district),2026,1,17,20.5,22.4,109.3,246,True
+fourth_street_north,Fourth Street (retail district),2026,2,14,20.5,22.4,109.3,246,True
+fourth_street_north,Fourth Street (retail district),2026,3,27,20.5,22.4,109.3,246,True
+fourth_street_north,Fourth Street (retail district),2026,4,10,20.5,22.4,109.3,246,True
+college_elmwood,College Ave (Elmwood),2021,1,17,36.2,29.2,80.5,435,True
+college_elmwood,College Ave (Elmwood),2021,2,35,36.2,29.2,80.5,435,True
+college_elmwood,College Ave (Elmwood),2021,3,37,36.2,29.2,80.5,435,True
+college_elmwood,College Ave (Elmwood),2021,4,45,36.2,29.2,80.5,435,True
+college_elmwood,College Ave (Elmwood),2021,5,47,36.2,29.2,80.5,435,True
+college_elmwood,College Ave (Elmwood),2021,6,38,36.2,29.2,80.5,435,True
+college_elmwood,College Ave (Elmwood),2021,7,23,36.2,29.2,80.5,435,True
+college_elmwood,College Ave (Elmwood),2021,8,35,36.2,29.2,80.5,435,True
+college_elmwood,College Ave (Elmwood),2021,9,51,36.2,29.2,80.5,435,True
+college_elmwood,College Ave (Elmwood),2021,10,49,36.2,29.2,80.5,435,True
+college_elmwood,College Ave (Elmwood),2021,11,30,36.2,29.2,80.5,435,True
+college_elmwood,College Ave (Elmwood),2021,12,28,36.2,29.2,80.5,435,True
+college_elmwood,College Ave (Elmwood),2022,1,33,36.2,29.2,80.5,435,True
+college_elmwood,College Ave (Elmwood),2022,2,23,36.2,29.2,80.5,435,True
+college_elmwood,College Ave (Elmwood),2022,3,30,36.2,29.2,80.5,435,True
+college_elmwood,College Ave (Elmwood),2022,4,27,36.2,29.2,80.5,435,True
+college_elmwood,College Ave (Elmwood),2022,5,37,36.2,29.2,80.5,435,True
+college_elmwood,College Ave (Elmwood),2022,6,23,36.2,29.2,80.5,435,True
+college_elmwood,College Ave (Elmwood),2022,7,29,36.2,29.2,80.5,435,True
+college_elmwood,College Ave (Elmwood),2022,8,36,36.2,29.2,80.5,435,True
+college_elmwood,College Ave (Elmwood),2022,9,36,36.2,29.2,80.5,435,True
+college_elmwood,College Ave (Elmwood),2022,10,41,36.2,29.2,80.5,435,True
+college_elmwood,College Ave (Elmwood),2022,11,28,36.2,29.2,80.5,435,True
+college_elmwood,College Ave (Elmwood),2022,12,42,36.2,29.2,80.5,435,True
+college_elmwood,College Ave (Elmwood),2023,1,25,36.2,29.2,80.5,435,True
+college_elmwood,College Ave (Elmwood),2023,2,27,36.2,29.2,80.5,435,True
+college_elmwood,College Ave (Elmwood),2023,3,37,36.2,29.2,80.5,435,True
+college_elmwood,College Ave (Elmwood),2023,4,43,36.2,29.2,80.5,435,True
+college_elmwood,College Ave (Elmwood),2023,5,18,36.2,29.2,80.5,435,True
+college_elmwood,College Ave (Elmwood),2023,6,22,36.2,29.2,80.5,435,True
+college_elmwood,College Ave (Elmwood),2023,7,34,36.2,29.2,80.5,435,True
+college_elmwood,College Ave (Elmwood),2023,8,30,36.2,29.2,80.5,435,True
+college_elmwood,College Ave (Elmwood),2023,9,45,36.2,29.2,80.5,435,True
+college_elmwood,College Ave (Elmwood),2023,10,19,36.2,29.2,80.5,435,True
+college_elmwood,College Ave (Elmwood),2023,11,26,36.2,29.2,80.5,435,True
+college_elmwood,College Ave (Elmwood),2023,12,31,36.2,29.2,80.5,435,True
+college_elmwood,College Ave (Elmwood),2024,1,29,36.2,29.2,80.5,435,True
+college_elmwood,College Ave (Elmwood),2024,2,28,36.2,29.2,80.5,435,True
+college_elmwood,College Ave (Elmwood),2024,3,27,36.2,29.2,80.5,435,True
+college_elmwood,College Ave (Elmwood),2024,4,20,36.2,29.2,80.5,435,True
+college_elmwood,College Ave (Elmwood),2024,5,17,36.2,29.2,80.5,435,True
+college_elmwood,College Ave (Elmwood),2024,6,28,36.2,29.2,80.5,435,True
+college_elmwood,College Ave (Elmwood),2024,7,37,36.2,29.2,80.5,435,True
+college_elmwood,College Ave (Elmwood),2024,8,31,36.2,29.2,80.5,435,True
+college_elmwood,College Ave (Elmwood),2024,9,41,36.2,29.2,80.5,435,True
+college_elmwood,College Ave (Elmwood),2024,10,28,36.2,29.2,80.5,435,True
+college_elmwood,College Ave (Elmwood),2024,11,33,36.2,29.2,80.5,435,True
+college_elmwood,College Ave (Elmwood),2024,12,35,36.2,29.2,80.5,435,True
+college_elmwood,College Ave (Elmwood),2025,1,23,36.2,29.2,80.5,435,True
+college_elmwood,College Ave (Elmwood),2025,2,28,36.2,29.2,80.5,435,True
+college_elmwood,College Ave (Elmwood),2025,3,30,36.2,29.2,80.5,435,True
+college_elmwood,College Ave (Elmwood),2025,4,28,36.2,29.2,80.5,435,True
+college_elmwood,College Ave (Elmwood),2025,5,33,36.2,29.2,80.5,435,True
+college_elmwood,College Ave (Elmwood),2025,6,22,36.2,29.2,80.5,435,True
+college_elmwood,College Ave (Elmwood),2025,7,35,36.2,29.2,80.5,435,True
+college_elmwood,College Ave (Elmwood),2025,8,27,36.2,29.2,80.5,435,True
+college_elmwood,College Ave (Elmwood),2025,9,31,36.2,29.2,80.5,435,True
+college_elmwood,College Ave (Elmwood),2025,10,37,36.2,29.2,80.5,435,True
+college_elmwood,College Ave (Elmwood),2025,11,26,36.2,29.2,80.5,435,True
+college_elmwood,College Ave (Elmwood),2025,12,30,36.2,29.2,80.5,435,True
+college_elmwood,College Ave (Elmwood),2026,1,21,36.2,29.2,80.5,435,True
+college_elmwood,College Ave (Elmwood),2026,2,22,36.2,29.2,80.5,435,True
+college_elmwood,College Ave (Elmwood),2026,3,24,36.2,29.2,80.5,435,True
+college_elmwood,College Ave (Elmwood),2026,4,18,36.2,29.2,80.5,435,True
+solano_avenue,Solano Avenue,2021,1,7,8.7,12.0,138.5,104,True
+solano_avenue,Solano Avenue,2021,2,6,8.7,12.0,138.5,104,True
+solano_avenue,Solano Avenue,2021,3,9,8.7,12.0,138.5,104,True
+solano_avenue,Solano Avenue,2021,4,12,8.7,12.0,138.5,104,True
+solano_avenue,Solano Avenue,2021,5,5,8.7,12.0,138.5,104,True
+solano_avenue,Solano Avenue,2021,6,8,8.7,12.0,138.5,104,True
+solano_avenue,Solano Avenue,2021,7,8,8.7,12.0,138.5,104,True
+solano_avenue,Solano Avenue,2021,8,13,8.7,12.0,138.5,104,True
+solano_avenue,Solano Avenue,2021,9,7,8.7,12.0,138.5,104,True
+solano_avenue,Solano Avenue,2021,10,12,8.7,12.0,138.5,104,True
+solano_avenue,Solano Avenue,2021,11,7,8.7,12.0,138.5,104,True
+solano_avenue,Solano Avenue,2021,12,10,8.7,12.0,138.5,104,True
+solano_avenue,Solano Avenue,2022,1,8,8.7,12.0,138.5,104,True
+solano_avenue,Solano Avenue,2022,2,7,8.7,12.0,138.5,104,True
+solano_avenue,Solano Avenue,2022,3,17,8.7,12.0,138.5,104,True
+solano_avenue,Solano Avenue,2022,4,10,8.7,12.0,138.5,104,True
+solano_avenue,Solano Avenue,2022,5,10,8.7,12.0,138.5,104,True
+solano_avenue,Solano Avenue,2022,6,15,8.7,12.0,138.5,104,True
+solano_avenue,Solano Avenue,2022,7,3,8.7,12.0,138.5,104,True
+solano_avenue,Solano Avenue,2022,8,5,8.7,12.0,138.5,104,True
+solano_avenue,Solano Avenue,2022,9,4,8.7,12.0,138.5,104,True
+solano_avenue,Solano Avenue,2022,10,11,8.7,12.0,138.5,104,True
+solano_avenue,Solano Avenue,2022,11,8,8.7,12.0,138.5,104,True
+solano_avenue,Solano Avenue,2022,12,11,8.7,12.0,138.5,104,True
+solano_avenue,Solano Avenue,2023,1,6,8.7,12.0,138.5,104,True
+solano_avenue,Solano Avenue,2023,2,7,8.7,12.0,138.5,104,True
+solano_avenue,Solano Avenue,2023,3,11,8.7,12.0,138.5,104,True
+solano_avenue,Solano Avenue,2023,4,11,8.7,12.0,138.5,104,True
+solano_avenue,Solano Avenue,2023,5,11,8.7,12.0,138.5,104,True
+solano_avenue,Solano Avenue,2023,6,8,8.7,12.0,138.5,104,True
+solano_avenue,Solano Avenue,2023,7,9,8.7,12.0,138.5,104,True
+solano_avenue,Solano Avenue,2023,8,11,8.7,12.0,138.5,104,True
+solano_avenue,Solano Avenue,2023,9,13,8.7,12.0,138.5,104,True
+solano_avenue,Solano Avenue,2023,10,7,8.7,12.0,138.5,104,True
+solano_avenue,Solano Avenue,2023,11,11,8.7,12.0,138.5,104,True
+solano_avenue,Solano Avenue,2023,12,17,8.7,12.0,138.5,104,True
+solano_avenue,Solano Avenue,2024,1,22,8.7,12.0,138.5,104,True
+solano_avenue,Solano Avenue,2024,2,21,8.7,12.0,138.5,104,True
+solano_avenue,Solano Avenue,2024,3,9,8.7,12.0,138.5,104,True
+solano_avenue,Solano Avenue,2024,4,10,8.7,12.0,138.5,104,True
+solano_avenue,Solano Avenue,2024,5,13,8.7,12.0,138.5,104,True
+solano_avenue,Solano Avenue,2024,6,10,8.7,12.0,138.5,104,True
+solano_avenue,Solano Avenue,2024,7,6,8.7,12.0,138.5,104,True
+solano_avenue,Solano Avenue,2024,8,12,8.7,12.0,138.5,104,True
+solano_avenue,Solano Avenue,2024,9,9,8.7,12.0,138.5,104,True
+solano_avenue,Solano Avenue,2024,10,11,8.7,12.0,138.5,104,True
+solano_avenue,Solano Avenue,2024,11,8,8.7,12.0,138.5,104,True
+solano_avenue,Solano Avenue,2024,12,8,8.7,12.0,138.5,104,True
+solano_avenue,Solano Avenue,2025,1,15,8.7,12.0,138.5,104,True
+solano_avenue,Solano Avenue,2025,2,13,8.7,12.0,138.5,104,True
+solano_avenue,Solano Avenue,2025,3,19,8.7,12.0,138.5,104,True
+solano_avenue,Solano Avenue,2025,4,23,8.7,12.0,138.5,104,True
+solano_avenue,Solano Avenue,2025,5,12,8.7,12.0,138.5,104,True
+solano_avenue,Solano Avenue,2025,6,7,8.7,12.0,138.5,104,True
+solano_avenue,Solano Avenue,2025,7,12,8.7,12.0,138.5,104,True
+solano_avenue,Solano Avenue,2025,8,8,8.7,12.0,138.5,104,True
+solano_avenue,Solano Avenue,2025,9,14,8.7,12.0,138.5,104,True
+solano_avenue,Solano Avenue,2025,10,12,8.7,12.0,138.5,104,True
+solano_avenue,Solano Avenue,2025,11,6,8.7,12.0,138.5,104,True
+solano_avenue,Solano Avenue,2025,12,3,8.7,12.0,138.5,104,True
+solano_avenue,Solano Avenue,2026,1,10,8.7,12.0,138.5,104,True
+solano_avenue,Solano Avenue,2026,2,14,8.7,12.0,138.5,104,True
+solano_avenue,Solano Avenue,2026,3,6,8.7,12.0,138.5,104,True
+solano_avenue,Solano Avenue,2026,4,4,8.7,12.0,138.5,104,True

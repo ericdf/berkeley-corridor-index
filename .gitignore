@@ -7,12 +7,7 @@ site/public/
 data/raw/current/*.geojson
 data/raw/current/*.csv
 data/raw/current/*.json
-data/processed/**
-!data/processed/.gitkeep
-!data/processed/charts/.gitkeep
-!data/processed/maps/.gitkeep
-!data/processed/downloads/.gitkeep
-!data/processed/metadata/.gitkeep
+# data/processed is committed — chart CSVs, map GeoJSONs, download CSVs, build metadata
 data/interim/**
 !data/interim/.gitkeep
 data/raw/source_snapshots/**

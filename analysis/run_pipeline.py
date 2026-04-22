@@ -45,6 +45,7 @@ from src import (
     compute_rolling_yoy,
     compute_data_sufficiency,
     compute_citywide_benchmark,
+    compute_incumbent_benchmark,
     # Export
     export_site_data,
 )
@@ -92,11 +93,12 @@ def main() -> None:
     step("19. Compute rolling YoY (site)",      compute_rolling_yoy.main)
     step("20. Data sufficiency flags",          compute_data_sufficiency.main)
     step("21. Citywide benchmark",              compute_citywide_benchmark.main)
+    step("22. Incumbent benchmark",            compute_incumbent_benchmark.main)
 
     # --- Export ---
-    step("22. Export site data",               export_site_data.main)
+    step("23. Export site data",               export_site_data.main)
 
-    print("\nPipeline complete. (22 steps)")
+    print("\nPipeline complete. (23 steps)")
 
 
 if __name__ == "__main__":

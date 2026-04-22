@@ -1,0 +1,5 @@
+id,label,address,opening_date,rate_per_month_all,rate_per_month_pre,rate_per_month_post,percentile_pre_vs_peers,percentile_post_vs_peers,percentile_all_vs_peers
+site_1461,1461 University,1461 University Ave,2021-07-01,18.11,11.5,18.8,60.0,100.0,100.0
+site_1619,1619 University,1619 University Ave,2023-07-31,4.62,2.54,5.69,40.0,40.0,40.0
+site_1761,1761 University,1761 University Ave,2026-02-01,13.76,11.33,10.7,60.0,40.0,60.0
+site_golden_bear,Golden Bear Inn,1620 San Pablo Ave,2023-01-01,7.58,3.89,10.39,40.0,40.0,40.0

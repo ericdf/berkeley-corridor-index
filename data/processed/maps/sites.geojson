@@ -1,0 +1,11 @@
+{
+"type": "FeatureCollection",
+"name": "sites",
+"crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } },
+"features": [
+{ "type": "Feature", "properties": { "site_id": "site_1461", "address": "1461 University Ave", "label": "1461 University", "opening_date": "2021-07-01", "program_type": "Interim housing / shelter" }, "geometry": { "type": "Point", "coordinates": [ -122.283223824502997, 37.870372705484002 ] } },
+{ "type": "Feature", "properties": { "site_id": "site_1619", "address": "1619 University Ave", "label": "1619 University", "opening_date": "2023-07-31", "program_type": "Reentry / supportive housing" }, "geometry": { "type": "Point", "coordinates": [ -122.278872531448002, 37.870924842515997 ] } },
+{ "type": "Feature", "properties": { "site_id": "site_1761", "address": "1761 University Ave", "label": "1761 University", "opening_date": "2026-02-01", "program_type": "Interim housing" }, "geometry": { "type": "Point", "coordinates": [ -122.276199756069005, 37.871270517905998 ] } },
+{ "type": "Feature", "properties": { "site_id": "site_golden_bear", "address": "1620 San Pablo Ave", "label": "Golden Bear Inn", "opening_date": "2023-01-01", "program_type": "Permanent supportive housing" }, "geometry": { "type": "Point", "coordinates": [ -122.294171617035005, 37.874813397159002 ] } }
+]
+}

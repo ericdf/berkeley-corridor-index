@@ -1,0 +1,13 @@
+site_id,address,zone,pre_count,post_count,pct_change,post_sufficient
+site_1461,1461 University Ave,site_block,68,203.0,198.5,true
+site_1461,1461 University Ave,adjacent_blocks,266,373.0,40.2,true
+site_1461,1461 University Ave,wider_nearby,308,543.0,76.3,true
+site_1619,1619 University Ave,site_block,45,89.0,97.8,true
+site_1619,1619 University Ave,adjacent_blocks,258,270.0,4.7,true
+site_1619,1619 University Ave,wider_nearby,1543,1364.0,-11.6,true
+site_1761,1761 University Ave,site_block,166,,,false
+site_1761,1761 University Ave,adjacent_blocks,783,,,false
+site_1761,1761 University Ave,wider_nearby,1285,,,false
+site_golden_bear,1620 San Pablo Ave,site_block,33,82.0,148.5,true
+site_golden_bear,1620 San Pablo Ave,adjacent_blocks,202,178.0,-11.9,true
+site_golden_bear,1620 San Pablo Ave,wider_nearby,450,380.0,-15.6,true

@@ -1,0 +1,257 @@
+series_id,label,date,count,index_value
+north_shattuck,North Shattuck,2021-01-01,67,95.0
+north_shattuck,North Shattuck,2021-02-01,76,107.8
+north_shattuck,North Shattuck,2021-03-01,68,96.5
+north_shattuck,North Shattuck,2021-04-01,70,99.3
+north_shattuck,North Shattuck,2021-05-01,76,107.8
+north_shattuck,North Shattuck,2021-06-01,66,93.6
+north_shattuck,North Shattuck,2021-07-01,58,82.3
+north_shattuck,North Shattuck,2021-08-01,94,133.3
+north_shattuck,North Shattuck,2021-09-01,111,157.4
+north_shattuck,North Shattuck,2021-10-01,99,140.4
+north_shattuck,North Shattuck,2021-11-01,75,106.4
+north_shattuck,North Shattuck,2021-12-01,58,82.3
+north_shattuck,North Shattuck,2022-01-01,84,119.1
+north_shattuck,North Shattuck,2022-02-01,59,83.7
+north_shattuck,North Shattuck,2022-03-01,66,93.6
+north_shattuck,North Shattuck,2022-04-01,78,110.6
+north_shattuck,North Shattuck,2022-05-01,84,119.1
+north_shattuck,North Shattuck,2022-06-01,92,130.5
+north_shattuck,North Shattuck,2022-07-01,72,102.1
+north_shattuck,North Shattuck,2022-08-01,86,122.0
+north_shattuck,North Shattuck,2022-09-01,86,122.0
+north_shattuck,North Shattuck,2022-10-01,64,90.8
+north_shattuck,North Shattuck,2022-11-01,61,86.5
+north_shattuck,North Shattuck,2022-12-01,59,83.7
+north_shattuck,North Shattuck,2023-01-01,73,103.5
+north_shattuck,North Shattuck,2023-02-01,57,80.9
+north_shattuck,North Shattuck,2023-03-01,66,93.6
+north_shattuck,North Shattuck,2023-04-01,67,95.0
+north_shattuck,North Shattuck,2023-05-01,59,83.7
+north_shattuck,North Shattuck,2023-06-01,65,92.2
+north_shattuck,North Shattuck,2023-07-01,85,120.6
+north_shattuck,North Shattuck,2023-08-01,72,102.1
+north_shattuck,North Shattuck,2023-09-01,77,109.2
+north_shattuck,North Shattuck,2023-10-01,74,105.0
+north_shattuck,North Shattuck,2023-11-01,63,89.4
+north_shattuck,North Shattuck,2023-12-01,59,83.7
+north_shattuck,North Shattuck,2024-01-01,43,61.0
+north_shattuck,North Shattuck,2024-02-01,66,93.6
+north_shattuck,North Shattuck,2024-03-01,53,75.2
+north_shattuck,North Shattuck,2024-04-01,64,90.8
+north_shattuck,North Shattuck,2024-05-01,94,133.3
+north_shattuck,North Shattuck,2024-06-01,75,106.4
+north_shattuck,North Shattuck,2024-07-01,77,109.2
+north_shattuck,North Shattuck,2024-08-01,101,143.3
+north_shattuck,North Shattuck,2024-09-01,69,97.9
+north_shattuck,North Shattuck,2024-10-01,69,97.9
+north_shattuck,North Shattuck,2024-11-01,61,86.5
+north_shattuck,North Shattuck,2024-12-01,50,70.9
+north_shattuck,North Shattuck,2025-01-01,59,83.7
+north_shattuck,North Shattuck,2025-02-01,37,52.5
+north_shattuck,North Shattuck,2025-03-01,54,76.6
+north_shattuck,North Shattuck,2025-04-01,57,80.9
+north_shattuck,North Shattuck,2025-05-01,57,80.9
+north_shattuck,North Shattuck,2025-06-01,59,83.7
+north_shattuck,North Shattuck,2025-07-01,52,73.8
+north_shattuck,North Shattuck,2025-08-01,50,70.9
+north_shattuck,North Shattuck,2025-09-01,63,89.4
+north_shattuck,North Shattuck,2025-10-01,54,76.6
+north_shattuck,North Shattuck,2025-11-01,49,69.5
+north_shattuck,North Shattuck,2025-12-01,35,49.6
+north_shattuck,North Shattuck,2026-01-01,44,62.4
+north_shattuck,North Shattuck,2026-02-01,53,75.2
+north_shattuck,North Shattuck,2026-03-01,42,59.6
+north_shattuck,North Shattuck,2026-04-01,18,25.5
+san_pablo_node,San Pablo node,2021-01-01,21,161.5
+san_pablo_node,San Pablo node,2021-02-01,9,69.2
+san_pablo_node,San Pablo node,2021-03-01,15,115.4
+san_pablo_node,San Pablo node,2021-04-01,6,46.2
+san_pablo_node,San Pablo node,2021-05-01,13,100.0
+san_pablo_node,San Pablo node,2021-06-01,14,107.7
+san_pablo_node,San Pablo node,2021-07-01,15,115.4
+san_pablo_node,San Pablo node,2021-08-01,22,169.2
+san_pablo_node,San Pablo node,2021-09-01,11,84.6
+san_pablo_node,San Pablo node,2021-10-01,5,38.5
+san_pablo_node,San Pablo node,2021-11-01,12,92.3
+san_pablo_node,San Pablo node,2021-12-01,17,130.8
+san_pablo_node,San Pablo node,2022-01-01,19,146.2
+san_pablo_node,San Pablo node,2022-02-01,8,61.5
+san_pablo_node,San Pablo node,2022-03-01,19,146.2
+san_pablo_node,San Pablo node,2022-04-01,12,92.3
+san_pablo_node,San Pablo node,2022-05-01,20,153.8
+san_pablo_node,San Pablo node,2022-06-01,16,123.1
+san_pablo_node,San Pablo node,2022-07-01,12,92.3
+san_pablo_node,San Pablo node,2022-08-01,21,161.5
+san_pablo_node,San Pablo node,2022-09-01,14,107.7
+san_pablo_node,San Pablo node,2022-10-01,15,115.4
+san_pablo_node,San Pablo node,2022-11-01,10,76.9
+san_pablo_node,San Pablo node,2022-12-01,11,84.6
+san_pablo_node,San Pablo node,2023-01-01,14,107.7
+san_pablo_node,San Pablo node,2023-02-01,17,130.8
+san_pablo_node,San Pablo node,2023-03-01,20,153.8
+san_pablo_node,San Pablo node,2023-04-01,11,84.6
+san_pablo_node,San Pablo node,2023-05-01,18,138.5
+san_pablo_node,San Pablo node,2023-06-01,15,115.4
+san_pablo_node,San Pablo node,2023-07-01,21,161.5
+san_pablo_node,San Pablo node,2023-08-01,15,115.4
+san_pablo_node,San Pablo node,2023-09-01,19,146.2
+san_pablo_node,San Pablo node,2023-10-01,17,130.8
+san_pablo_node,San Pablo node,2023-11-01,18,138.5
+san_pablo_node,San Pablo node,2023-12-01,15,115.4
+san_pablo_node,San Pablo node,2024-01-01,24,184.6
+san_pablo_node,San Pablo node,2024-02-01,14,107.7
+san_pablo_node,San Pablo node,2024-03-01,20,153.8
+san_pablo_node,San Pablo node,2024-04-01,25,192.3
+san_pablo_node,San Pablo node,2024-05-01,27,207.7
+san_pablo_node,San Pablo node,2024-06-01,25,192.3
+san_pablo_node,San Pablo node,2024-07-01,20,153.8
+san_pablo_node,San Pablo node,2024-08-01,29,223.1
+san_pablo_node,San Pablo node,2024-09-01,32,246.2
+san_pablo_node,San Pablo node,2024-10-01,15,115.4
+san_pablo_node,San Pablo node,2024-11-01,14,107.7
+san_pablo_node,San Pablo node,2024-12-01,14,107.7
+san_pablo_node,San Pablo node,2025-01-01,18,138.5
+san_pablo_node,San Pablo node,2025-02-01,29,223.1
+san_pablo_node,San Pablo node,2025-03-01,9,69.2
+san_pablo_node,San Pablo node,2025-04-01,19,146.2
+san_pablo_node,San Pablo node,2025-05-01,32,246.2
+san_pablo_node,San Pablo node,2025-06-01,24,184.6
+san_pablo_node,San Pablo node,2025-07-01,37,284.6
+san_pablo_node,San Pablo node,2025-08-01,14,107.7
+san_pablo_node,San Pablo node,2025-09-01,24,184.6
+san_pablo_node,San Pablo node,2025-10-01,24,184.6
+san_pablo_node,San Pablo node,2025-11-01,18,138.5
+san_pablo_node,San Pablo node,2025-12-01,18,138.5
+san_pablo_node,San Pablo node,2026-01-01,22,169.2
+san_pablo_node,San Pablo node,2026-02-01,17,130.8
+san_pablo_node,San Pablo node,2026-03-01,26,200.0
+san_pablo_node,San Pablo node,2026-04-01,15,115.4
+south_telegraph,South Telegraph,2021-01-01,41,88.8
+south_telegraph,South Telegraph,2021-02-01,42,91.0
+south_telegraph,South Telegraph,2021-03-01,43,93.1
+south_telegraph,South Telegraph,2021-04-01,57,123.5
+south_telegraph,South Telegraph,2021-05-01,45,97.5
+south_telegraph,South Telegraph,2021-06-01,49,106.1
+south_telegraph,South Telegraph,2021-07-01,47,101.8
+south_telegraph,South Telegraph,2021-08-01,54,117.0
+south_telegraph,South Telegraph,2021-09-01,51,110.5
+south_telegraph,South Telegraph,2021-10-01,59,127.8
+south_telegraph,South Telegraph,2021-11-01,53,114.8
+south_telegraph,South Telegraph,2021-12-01,44,95.3
+south_telegraph,South Telegraph,2022-01-01,55,119.1
+south_telegraph,South Telegraph,2022-02-01,52,112.6
+south_telegraph,South Telegraph,2022-03-01,57,123.5
+south_telegraph,South Telegraph,2022-04-01,48,104.0
+south_telegraph,South Telegraph,2022-05-01,55,119.1
+south_telegraph,South Telegraph,2022-06-01,54,117.0
+south_telegraph,South Telegraph,2022-07-01,53,114.8
+south_telegraph,South Telegraph,2022-08-01,58,125.6
+south_telegraph,South Telegraph,2022-09-01,54,117.0
+south_telegraph,South Telegraph,2022-10-01,72,156.0
+south_telegraph,South Telegraph,2022-11-01,50,108.3
+south_telegraph,South Telegraph,2022-12-01,52,112.6
+south_telegraph,South Telegraph,2023-01-01,54,117.0
+south_telegraph,South Telegraph,2023-02-01,41,88.8
+south_telegraph,South Telegraph,2023-03-01,61,132.1
+south_telegraph,South Telegraph,2023-04-01,75,162.5
+south_telegraph,South Telegraph,2023-05-01,70,151.6
+south_telegraph,South Telegraph,2023-06-01,55,119.1
+south_telegraph,South Telegraph,2023-07-01,63,136.5
+south_telegraph,South Telegraph,2023-08-01,50,108.3
+south_telegraph,South Telegraph,2023-09-01,47,101.8
+south_telegraph,South Telegraph,2023-10-01,52,112.6
+south_telegraph,South Telegraph,2023-11-01,38,82.3
+south_telegraph,South Telegraph,2023-12-01,42,91.0
+south_telegraph,South Telegraph,2024-01-01,47,101.8
+south_telegraph,South Telegraph,2024-02-01,55,119.1
+south_telegraph,South Telegraph,2024-03-01,42,91.0
+south_telegraph,South Telegraph,2024-04-01,47,101.8
+south_telegraph,South Telegraph,2024-05-01,28,60.6
+south_telegraph,South Telegraph,2024-06-01,33,71.5
+south_telegraph,South Telegraph,2024-07-01,38,82.3
+south_telegraph,South Telegraph,2024-08-01,36,78.0
+south_telegraph,South Telegraph,2024-09-01,46,99.6
+south_telegraph,South Telegraph,2024-10-01,46,99.6
+south_telegraph,South Telegraph,2024-11-01,40,86.6
+south_telegraph,South Telegraph,2024-12-01,48,104.0
+south_telegraph,South Telegraph,2025-01-01,47,101.8
+south_telegraph,South Telegraph,2025-02-01,32,69.3
+south_telegraph,South Telegraph,2025-03-01,41,88.8
+south_telegraph,South Telegraph,2025-04-01,47,101.8
+south_telegraph,South Telegraph,2025-05-01,75,162.5
+south_telegraph,South Telegraph,2025-06-01,42,91.0
+south_telegraph,South Telegraph,2025-07-01,30,65.0
+south_telegraph,South Telegraph,2025-08-01,59,127.8
+south_telegraph,South Telegraph,2025-09-01,48,104.0
+south_telegraph,South Telegraph,2025-10-01,47,101.8
+south_telegraph,South Telegraph,2025-11-01,44,95.3
+south_telegraph,South Telegraph,2025-12-01,44,95.3
+south_telegraph,South Telegraph,2026-01-01,30,65.0
+south_telegraph,South Telegraph,2026-02-01,33,71.5
+south_telegraph,South Telegraph,2026-03-01,37,80.1
+south_telegraph,South Telegraph,2026-04-01,22,47.7
+university_core,University Avenue core cluster,2021-01-01,77,124.5
+university_core,University Avenue core cluster,2021-02-01,58,93.8
+university_core,University Avenue core cluster,2021-03-01,56,90.6
+university_core,University Avenue core cluster,2021-04-01,59,95.4
+university_core,University Avenue core cluster,2021-05-01,63,101.9
+university_core,University Avenue core cluster,2021-06-01,58,93.8
+university_core,University Avenue core cluster,2021-07-01,58,93.8
+university_core,University Avenue core cluster,2021-08-01,53,85.7
+university_core,University Avenue core cluster,2021-09-01,54,87.3
+university_core,University Avenue core cluster,2021-10-01,58,93.8
+university_core,University Avenue core cluster,2021-11-01,58,93.8
+university_core,University Avenue core cluster,2021-12-01,72,116.4
+university_core,University Avenue core cluster,2022-01-01,66,106.7
+university_core,University Avenue core cluster,2022-02-01,56,90.6
+university_core,University Avenue core cluster,2022-03-01,82,132.6
+university_core,University Avenue core cluster,2022-04-01,51,82.5
+university_core,University Avenue core cluster,2022-05-01,67,108.4
+university_core,University Avenue core cluster,2022-06-01,64,103.5
+university_core,University Avenue core cluster,2022-07-01,68,110.0
+university_core,University Avenue core cluster,2022-08-01,68,110.0
+university_core,University Avenue core cluster,2022-09-01,60,97.0
+university_core,University Avenue core cluster,2022-10-01,74,119.7
+university_core,University Avenue core cluster,2022-11-01,66,106.7
+university_core,University Avenue core cluster,2022-12-01,50,80.9
+university_core,University Avenue core cluster,2023-01-01,53,85.7
+university_core,University Avenue core cluster,2023-02-01,67,108.4
+university_core,University Avenue core cluster,2023-03-01,66,106.7
+university_core,University Avenue core cluster,2023-04-01,78,126.1
+university_core,University Avenue core cluster,2023-05-01,69,111.6
+university_core,University Avenue core cluster,2023-06-01,61,98.7
+university_core,University Avenue core cluster,2023-07-01,84,135.8
+university_core,University Avenue core cluster,2023-08-01,80,129.4
+university_core,University Avenue core cluster,2023-09-01,103,166.6
+university_core,University Avenue core cluster,2023-10-01,56,90.6
+university_core,University Avenue core cluster,2023-11-01,50,80.9
+university_core,University Avenue core cluster,2023-12-01,62,100.3
+university_core,University Avenue core cluster,2024-01-01,72,116.4
+university_core,University Avenue core cluster,2024-02-01,61,98.7
+university_core,University Avenue core cluster,2024-03-01,59,95.4
+university_core,University Avenue core cluster,2024-04-01,67,108.4
+university_core,University Avenue core cluster,2024-05-01,50,80.9
+university_core,University Avenue core cluster,2024-06-01,58,93.8
+university_core,University Avenue core cluster,2024-07-01,113,182.7
+university_core,University Avenue core cluster,2024-08-01,63,101.9
+university_core,University Avenue core cluster,2024-09-01,74,119.7
+university_core,University Avenue core cluster,2024-10-01,84,135.8
+university_core,University Avenue core cluster,2024-11-01,61,98.7
+university_core,University Avenue core cluster,2024-12-01,72,116.4
+university_core,University Avenue core cluster,2025-01-01,68,110.0
+university_core,University Avenue core cluster,2025-02-01,69,111.6
+university_core,University Avenue core cluster,2025-03-01,87,140.7
+university_core,University Avenue core cluster,2025-04-01,97,156.9
+university_core,University Avenue core cluster,2025-05-01,90,145.6
+university_core,University Avenue core cluster,2025-06-01,84,135.8
+university_core,University Avenue core cluster,2025-07-01,86,139.1
+university_core,University Avenue core cluster,2025-08-01,82,132.6
+university_core,University Avenue core cluster,2025-09-01,77,124.5
+university_core,University Avenue core cluster,2025-10-01,69,111.6
+university_core,University Avenue core cluster,2025-11-01,66,106.7
+university_core,University Avenue core cluster,2025-12-01,84,135.8
+university_core,University Avenue core cluster,2026-01-01,57,92.2
+university_core,University Avenue core cluster,2026-02-01,63,101.9
+university_core,University Avenue core cluster,2026-03-01,84,135.8
+university_core,University Avenue core cluster,2026-04-01,36,58.2

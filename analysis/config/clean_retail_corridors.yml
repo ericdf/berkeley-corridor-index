@@ -1,0 +1,34 @@
+# "Clean retail" comparison corridors — no shelter facilities, selected as
+# positive baselines for what a commercial corridor looks like without shelter pressure.
+
+clean_retail_corridors:
+
+  - id: fourth_street_north
+    label: "Fourth Street (retail district)"
+    street_name: "Fourth Street"
+    # North of University Ave retail strip; lon range covers the street centered ~-122.301
+    bbox:
+      lat_min: 37.867
+      lat_max: 37.883
+      lon_min: -122.306
+      lon_max: -122.297
+
+  - id: college_elmwood
+    label: "College Ave (Elmwood)"
+    street_name: "College Avenue"
+    # ~4 blocks each side of Ashby Ave
+    bbox:
+      lat_min: 37.854
+      lat_max: 37.862
+      lon_min: -122.254
+      lon_max: -122.247
+
+  - id: solano_avenue
+    label: "Solano Avenue"
+    street_name: "Solano Avenue"
+    # Berkeley commercial strip + into Albany; lat adjusted to actual street location
+    bbox:
+      lat_min: 37.887
+      lat_max: 37.893
+      lon_min: -122.308
+      lon_max: -122.272

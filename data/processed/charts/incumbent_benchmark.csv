@@ -1,0 +1,7 @@
+id,label,address,operator,program_type,opening_date,operating_months,call_count,rate_per_month,monitor_only,insufficient_history,is_excluded,percentile_among_peers
+usv,Ursula Sherman Village,711 Harrison St,BOSS,Emergency shelter / transitional,1971-01-01,63.4,59,0.93,False,False,False,20.0
+stair,STAIR Navigation Center,1601 Second St,City of Berkeley,Navigation center,2018-06-27,63.4,49,0.77,False,False,False,0.0
+hope_center,Hope Center,2012 Berkeley Way,Insight Housing,Emergency shelter / PSH / transitional,2022-09-01,43.5,726,16.7,False,False,False,60.0
+berkeley_inn,Berkeley Inn (Beyond the Horizon),1720 San Pablo Ave,Dorothy Day House,Interim housing (motel),2023-01-01,39.5,426,10.8,False,False,False,40.0
+hope_center_berkeley_way,Hope Center (Berkeley Way),2012 Berkeley Way,Insight Housing,Emergency shelter / PSH / transitional,2022-09-01,43.5,726,16.7,False,False,False,60.0
+capri_1512,1512 University Ave,1512 University Ave,,Interim housing (motel),,63.4,421,6.64,True,False,True,40.0

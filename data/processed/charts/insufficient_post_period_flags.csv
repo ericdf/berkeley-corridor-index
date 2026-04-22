@@ -1,0 +1,5 @@
+site_id,address,opening_date,geography_group,post_end,data_through,post_coverage_pct,post_sufficient
+site_1461,1461 University Ave,2021-07-01,university_core,2022-07-01,2026-04-16,100.0,true
+site_1619,1619 University Ave,2023-07-31,university_core,2024-07-31,2026-04-16,100.0,true
+site_1761,1761 University Ave,2026-02-01,university_core,2027-02-01,2026-04-16,20.3,false
+site_golden_bear,1620 San Pablo Ave,2023-01-01,san_pablo_node,2024-01-01,2026-04-16,100.0,true

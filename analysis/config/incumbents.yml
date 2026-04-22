@@ -1,0 +1,71 @@
+# Incumbent overnight homeless services facilities in Berkeley.
+# Used to benchmark study sites against peer institutions rather than
+# arbitrary citywide grid points.
+#
+# opening_date: date facility began overnight residential operations at this address.
+# monitor_only: true means include in data collection but exclude from
+#   comparative results due to insufficient operating history.
+# Coordinates are approximate — verify before publication.
+
+incumbents:
+  - id: usv
+    label: "Ursula Sherman Village"
+    address: "711 Harrison St"
+    lat: 37.8671
+    lon: -122.3028
+    opening_date: "1971-01-01"   # long-established; placeholder day/month
+    operator: "BOSS"
+    program_type: "Emergency shelter / transitional"
+    notes: "First shelter for homeless disabled adults in California. Beds for adults with disabilities and families."
+
+  - id: stair
+    label: "STAIR Navigation Center"
+    address: "1601 Second St"
+    lat: 37.8782
+    lon: -122.2986
+    opening_date: "2018-06-27"
+    operator: "City of Berkeley"
+    program_type: "Navigation center"
+    notes: "Berkeley's first navigation center. 50 beds. Opened June 2018."
+
+  - id: hope_center
+    label: "Hope Center"
+    address: "2012 Berkeley Way"
+    lat: 37.8710
+    lon: -122.2745
+    opening_date: "2022-09-01"   # first residents moved in end of September 2022
+    operator: "Insight Housing"
+    program_type: "Emergency shelter / PSH / transitional"
+    notes: "32 emergency shelter beds, 53 PSH units, 12 transitional vet beds. Opened Sept 2022."
+
+  - id: berkeley_inn
+    label: "Berkeley Inn (Beyond the Horizon)"
+    address: "1720 San Pablo Ave"
+    lat: 37.8751
+    lon: -122.2940
+    opening_date: "2023-01-01"
+    operator: "Dorothy Day House"
+    program_type: "Interim housing (motel)"
+    notes: "Dorothy Day House took over Jan 2023 when Grayson RV safe-parking site closed. 25+ residents."
+
+  - id: hope_center_berkeley_way
+    label: "Hope Center (Berkeley Way)"
+    address: "2012 Berkeley Way"
+    lat: 37.8710
+    lon: -122.2745
+    opening_date: "2022-09-01"
+    operator: "Insight Housing"
+    program_type: "Emergency shelter / PSH / transitional"
+    include_in_shift: true
+    notes: "32 emergency shelter beds, 53 PSH units, 12 transitional vet beds. Sits at eastern terminus of Berkeley Way one block from North Shattuck."
+
+  - id: capri_1512
+    label: "1512 University Ave"
+    address: "1512 University Ave"
+    lat: 37.8704
+    lon: -122.2812
+    opening_date: null            # TODO: confirm opening date
+    operator: null
+    program_type: "Interim housing (motel)"
+    monitor_only: true
+    notes: "Too new for comparative analysis; include in data collection only. Confirm operator and opening date."

@@ -1,0 +1,5 @@
+site_id,address,label,geography_group,opening_date,call_count_100m,percentile_citywide,percentile_flats,percentile_corridor,pre_count_100m,pre_rate_per_month,pre_percentile_citywide,pre_percentile_corridor,post_count_100m,post_rate_per_month,rate_change_pct
+site_1461,1461 University Ave,1461 University,university_core,2021-07-01,1149,99.3,99.2,96.2,68,11.5,97.6,87.5,1081,18.8,63.5
+site_1619,1619 University Ave,1619 University,university_core,2023-07-31,293,91.5,91.3,67.6,15,2.5,82.9,54.5,278,4.8,92.0
+site_1761,1761 University Ave,1761 University,university_core,2026-02-01,873,98.3,98.3,90.5,67,11.3,97.6,87.2,806,14.0,23.9
+site_golden_bear,1620 San Pablo Ave,Golden Bear Inn,san_pablo_node,2023-01-01,481,96.2,96.1,81.5,23,3.9,89.5,67.0,458,8.0,105.1

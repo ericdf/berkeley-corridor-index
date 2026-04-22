@@ -1,0 +1,14 @@
+site_id,address,period,calls_in_zone,calls_total_citywide,calls_total_study_area,share_of_citywide_pct,share_of_study_area_pct,zone_area_m2
+all_sites,All site zones combined,all,2796,88775,5500.0,3.15,50.84,125462
+site_1461,1461 University Ave,all,1149,88775,5500.0,1.29,20.89,31365
+site_1461,1461 University Ave,pre,68,8059,,0.84,,31365
+site_1461,1461 University Ave,post,203,17415,,1.17,,31365
+site_1619,1619 University Ave,all,293,88775,5500.0,0.33,5.33,31365
+site_1619,1619 University Ave,pre,45,17781,,0.25,,31365
+site_1619,1619 University Ave,post,89,16336,,0.54,,31365
+site_1761,1761 University Ave,all,873,88775,5500.0,0.98,15.87,31365
+site_1761,1761 University Ave,pre,166,16002,,1.04,,31365
+site_1761,1761 University Ave,post,26,3336,,0.78,,31365
+site_golden_bear,1620 San Pablo Ave,all,481,88775,5500.0,0.54,8.75,31365
+site_golden_bear,1620 San Pablo Ave,pre,33,17471,,0.19,,31365
+site_golden_bear,1620 San Pablo Ave,post,82,17291,,0.47,,31365

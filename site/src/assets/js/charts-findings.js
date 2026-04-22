@@ -1,7 +1,8 @@
 // Findings page charts using Observable Plot
 
+const _BASE = (window.BASE_PATH || "/").replace(/\/$/, "");
 async function loadCsv(path) {
-  const res = await fetch(path);
+  const res = await fetch(_BASE + path);
   if (!res.ok) throw new Error(`Failed to load ${path}: ${res.status}`);
   return d3.csvParse(await res.text(), d3.autoType);
 }

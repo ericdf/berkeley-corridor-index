@@ -14,6 +14,7 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addFilter("year", () => new Date().getFullYear());
 
   return {
+    pathPrefix: process.env.ELEVENTY_PREFIX || "/",
     dir: {
       input: "site/src",
       output: "site/public",

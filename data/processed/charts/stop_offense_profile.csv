@@ -1,0 +1,49 @@
+site_id,label,address,category,site_n,site_pct,citywide_pct,diff_pct,total_stops
+site_1461,1461 University,1461 University Ave,drug – paraphernalia,6,4.2,5.3,-1.1,144
+site_1461,1461 University,1461 University Ave,drug – possession,3,2.1,1.4,0.7,144
+site_1461,1461 University,1461 University Ave,drug – dealing/sales,0,0.0,0.1,-0.1,144
+site_1461,1461 University,1461 University Ave,alcohol,1,0.7,5.1,-4.4,144
+site_1461,1461 University,1461 University Ave,theft / robbery,61,42.4,13.9,28.5,144
+site_1461,1461 University,1461 University Ave,trespass,14,9.7,12.5,-2.8,144
+site_1461,1461 University,1461 University Ave,violence / weapons,14,9.7,12.3,-2.6,144
+site_1461,1461 University,1461 University Ave,disorder / disturbance,5,3.5,4.4,-0.9,144
+site_1461,1461 University,1461 University Ave,mental health / welfare,9,6.2,13.0,-6.8,144
+site_1461,1461 University,1461 University Ave,vandalism,3,2.1,2.4,-0.3,144
+site_1461,1461 University,1461 University Ave,other / unknown,9,6.2,9.6,-3.4,144
+site_1461,1461 University,1461 University Ave,no offense recorded,19,13.2,20.0,-6.8,144
+site_1619,1619 University,1619 University Ave,drug – paraphernalia,0,0.0,5.3,-5.3,35
+site_1619,1619 University,1619 University Ave,drug – possession,0,0.0,1.4,-1.4,35
+site_1619,1619 University,1619 University Ave,drug – dealing/sales,0,0.0,0.1,-0.1,35
+site_1619,1619 University,1619 University Ave,alcohol,1,2.9,5.1,-2.2,35
+site_1619,1619 University,1619 University Ave,theft / robbery,4,11.4,13.9,-2.5,35
+site_1619,1619 University,1619 University Ave,trespass,8,22.9,12.5,10.4,35
+site_1619,1619 University,1619 University Ave,violence / weapons,8,22.9,12.3,10.6,35
+site_1619,1619 University,1619 University Ave,disorder / disturbance,0,0.0,4.4,-4.4,35
+site_1619,1619 University,1619 University Ave,mental health / welfare,6,17.1,13.0,4.1,35
+site_1619,1619 University,1619 University Ave,vandalism,0,0.0,2.4,-2.4,35
+site_1619,1619 University,1619 University Ave,other / unknown,1,2.9,9.6,-6.7,35
+site_1619,1619 University,1619 University Ave,no offense recorded,7,20.0,20.0,0.0,35
+site_1761,1761 University,1761 University Ave,drug – paraphernalia,3,5.1,5.3,-0.2,59
+site_1761,1761 University,1761 University Ave,drug – possession,1,1.7,1.4,0.3,59
+site_1761,1761 University,1761 University Ave,drug – dealing/sales,0,0.0,0.1,-0.1,59
+site_1761,1761 University,1761 University Ave,alcohol,2,3.4,5.1,-1.7,59
+site_1761,1761 University,1761 University Ave,theft / robbery,7,11.9,13.9,-2.0,59
+site_1761,1761 University,1761 University Ave,trespass,8,13.6,12.5,1.1,59
+site_1761,1761 University,1761 University Ave,violence / weapons,8,13.6,12.3,1.3,59
+site_1761,1761 University,1761 University Ave,disorder / disturbance,1,1.7,4.4,-2.7,59
+site_1761,1761 University,1761 University Ave,mental health / welfare,10,16.9,13.0,3.9,59
+site_1761,1761 University,1761 University Ave,vandalism,3,5.1,2.4,2.7,59
+site_1761,1761 University,1761 University Ave,other / unknown,9,15.3,9.6,5.7,59
+site_1761,1761 University,1761 University Ave,no offense recorded,7,11.9,20.0,-8.1,59
+site_golden_bear,Golden Bear Inn,1620 San Pablo Ave,drug – paraphernalia,1,1.4,5.3,-3.9,71
+site_golden_bear,Golden Bear Inn,1620 San Pablo Ave,drug – possession,1,1.4,1.4,0.0,71
+site_golden_bear,Golden Bear Inn,1620 San Pablo Ave,drug – dealing/sales,0,0.0,0.1,-0.1,71
+site_golden_bear,Golden Bear Inn,1620 San Pablo Ave,alcohol,4,5.6,5.1,0.5,71
+site_golden_bear,Golden Bear Inn,1620 San Pablo Ave,theft / robbery,9,12.7,13.9,-1.2,71
+site_golden_bear,Golden Bear Inn,1620 San Pablo Ave,trespass,5,7.0,12.5,-5.5,71
+site_golden_bear,Golden Bear Inn,1620 San Pablo Ave,violence / weapons,11,15.5,12.3,3.2,71
+site_golden_bear,Golden Bear Inn,1620 San Pablo Ave,disorder / disturbance,1,1.4,4.4,-3.0,71
+site_golden_bear,Golden Bear Inn,1620 San Pablo Ave,mental health / welfare,6,8.5,13.0,-4.5,71
+site_golden_bear,Golden Bear Inn,1620 San Pablo Ave,vandalism,5,7.0,2.4,4.6,71
+site_golden_bear,Golden Bear Inn,1620 San Pablo Ave,other / unknown,11,15.5,9.6,5.9,71
+site_golden_bear,Golden Bear Inn,1620 San Pablo Ave,no offense recorded,17,23.9,20.0,3.9,71
