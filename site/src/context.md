@@ -464,6 +464,32 @@ The pattern across both panels is consistent: appointment to a body with "Expert
 
 ---
 
+## April 2026: The Panel Fractures
+
+<div class="key-insight"><p>When the institution created to protect a spending apparatus begins distinguishing programs it will and will not defend, the apparatus has started failing on its own terms. The question is whether the political class will name what is happening — or find another mechanism to defer the reckoning.</p></div>
+
+The Budget and Finance Committee meeting of April 16, 2026 produced the most significant public break yet in the coalition that built and sustained Berkeley's homeless services apparatus.
+
+Carol M., a member of the Homeless Services Panel of Experts, appeared before the committee with two distinct messages — delivered, pointedly, in sequence. Speaking first on behalf of the Panel, she conveyed a unanimous vote of its members: the Panel wanted a formal seat at the budget table, as it believed its authorizing measure required. The institution was protecting itself. Then she reframed.
+
+"Speaking in my individual capacity," she said, "I support the reduction to the Pathways Care Center."
+
+The Pathways Care Center — the descendant of the STAIR Navigation Center, which opened in 2018 as a six-month pilot and survived for seven years without defined performance thresholds — had just been recommended for reduction by City Manager Paul Buddenhagen's budget-balancing plan. A member of the Panel whose job was to legitimize Measure P spending had endorsed cutting one of the system's flagship programs.
+
+On mobile crisis, her assessment was equally direct. The Mobile Crisis Team had "become a skeleton crew that's become ineffective, in part because it was confused with a dysfunctional specialized care unit, with anti-police sentiment against a co-response model." She supported transferring mobile crisis to the county.
+
+The Specialized Care Unit had consumed $4.5 million in one-time ARPA funds before being transferred to Alameda County in 2025. Carol's characterization — "dysfunctional," built around "anti-police sentiment" — is consistent with the documented record: the unit operated daytime-only for its first year despite a 24/7 mandate; it lacked dispatch system access for 16 months; it was built at substantial city expense to replace a co-response model that had functioned for fifty years. That a member of the panel charged with overseeing these programs is now applying these labels represents a meaningful shift in what the city's own accountability infrastructure will defend.
+
+The more consequential claim, truncated at the one-minute public comment limit, concerned what Berkeley has never claimed. Under the litigation settlement of *Disability Rights California v. Alameda County*, Alameda County is legally required to provide mobile crisis response, peer respite services, and crisis residential capacity. Carol's testimony indicated that Berkeley "has not been advocating to get its fair share" under that settlement — that other jurisdictions have received their entitlements while Berkeley continued funding city-operated substitutes, at city expense, for services the county was contractually obligated to deliver.<sup><a href="#fn40">40</a></sup>
+
+If accurate, this would mean Berkeley spent years funding its own constraints on one side — underwriting legal organizations that challenged the city's enforcement capacity — while simultaneously failing to claim services the county was already obligated to provide on the other. The fiscal cost of that double failure has never been calculated or publicly disclosed.
+
+The cross-ideological character of the county-transfer conversation was confirmed by Kelly Hammergren, a veteran progressive civic watchdog and frequent public commenter, who used her one minute to ask whether Berkeley's public health officer function should shift to the county — and whether the Planning Department, whose director had publicly characterized its general fund allocation as "insignificant" at 11% of the department's budget, deserved a reduction of only 12.5%. These are not conservative arguments. They are management questions of the kind that the Panel of Experts, had it functioned as independent technical oversight, might have asked at any point over the preceding eight years.<sup><a href="#fn40">40</a></sup>
+
+The committee produced no resolution. Council members noted they had "many questions" and would return to them. The Panel, having secured its demand for a seat at the table, did not address why its years of occupying that seat had not produced the accountability it was now implicitly endorsing. The structural fiscal deficit the panel's spending helped create was, as of April 2026, running at approximately $29 million per year — the same figure appearing in the city manager's budget-balancing proposal and in council members' constituent newsletters as evidence that a new sales tax was urgently needed.
+
+---
+
 ## Endnotes
 
 <ol class="endnotes">
@@ -504,6 +530,7 @@ The pattern across both panels is consistent: appointment to a body with "Expert
   <li id="fn35">Berkeley/Alameda County Point-in-Time Count data, 2009–2024. Many original city URLs are unavailable following berkeleyca.gov site redesigns; figures compiled from public records. 2009 figure also cited in City of Berkeley staff report for the Berkeley Way project, September 2013 (see fn33).</li>
   <li id="fn36">City of Berkeley: <a href="https://berkeleyca.gov/sites/default/files/documents/2024-07-09%20Item%2016%20Referral%20Response%20%20Gap%20Analysis%20of%20Berkeley's%20Homelessness%20-%20Pres.pdf" target="_blank" rel="noopener">Gap Analysis of Berkeley's Homelessness System (July 9, 2024)</a> — annual unduplicated count 2,100 (2022); service user trend 1,813→2,332 (2021–2023); flow diagram: 650 newly homeless, 500 exiting to housing, net +250/year.</li>
   <li id="fn38">CBS News Bay Area: <a href="https://www.cbsnews.com/sanfrancisco/news/berkeley-carleton-street-bayer/" target="_blank" rel="noopener">Berkeley will give Bayer Pharmaceutical stretch of road that has homeless encampment (Katie Nielsen, August 3, 2025)</a> — city staffer quote on shelter availability; "outdoor thrift store" characterization; city non-response to press inquiry.</li>
+  <li id="fn40">City of Berkeley Budget and Finance Committee: public meeting transcript, April 16, 2026. Carol M. statement: 01:38:29–01:40:39 (timestamped captions). Kelly Hammergren statement: 01:48:57–01:49:58. City manager's remarks on county service transfer discussions: 01:31:04–01:35:07. On file.</li>
   <li id="fn39">Berkeley City Auditor (Jenny Wong): <em>Homeless Response Team: Opportunities Exist to Strengthen Procedures and Better Track Outcomes</em>, July 16, 2025. Covers HRT operations FY2022–2024. Key findings: 844 unhoused / 320 beds gap; HRT controls 56 of 320 beds; HMIS access delayed until December 2022; Coordinated Entry access delayed until September 2024; coordination meetings suspended October 2023–September 2024; 311 calls rose 880→1,090 despite declining unsheltered count; all outcomes reported cumulatively, preventing trend analysis; total FY2024 spending approximately $35M. Oakland comparison: 7+ dedicated FTE in City Administrator's Office alone. PDF on file.</li>
   <li id="fn37">Insight Housing: <a href="https://insighthousing.org/a-second-chance-largest-affordable-housing-development-in-berkeley-history-opens/" target="_blank" rel="noopener">A Second Chance — Largest affordable housing development in Berkeley history opens (October 2022)</a>; SF YIMBY: <a href="https://sfyimby.com/2022/11/largest-affordable-housing-project-in-berkeley-opens-at-2012-berkeley-way.html" target="_blank" rel="noopener">Largest affordable housing project in Berkeley opens at 2012 Berkeley Way (November 2022)</a> — ribbon-cutting October 27, 2022; Harrison "win-win" characterization.</li>
 </ol>
